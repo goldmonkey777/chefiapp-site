@@ -39,13 +39,12 @@ export function LabPartner() {
         <div className="relative grid md:grid-cols-2 gap-8 items-center">
           {/* Left: Logo & Info */}
           <div className="text-center md:text-left">
-            {/* Logo placeholder - você pode substituir por imagem real */}
-            <div className="inline-flex items-center justify-center w-32 h-32 mb-6 bg-gradient-to-br from-orange-500 to-orange-600 rounded-2xl shadow-xl shadow-orange-500/25">
-              <div className="text-center">
-                <div className="text-4xl font-bold text-white">SG</div>
-                <div className="text-xs text-orange-100 mt-1">IBIZA</div>
-              </div>
-            </div>
+            {/* Sofia Gastrobar Logo */}
+            <img 
+              src="/partners/sofia-gastrobar-logo.svg" 
+              alt="Sofia Gastrobar Ibiza" 
+              className="w-32 h-32 mb-6 rounded-2xl shadow-xl shadow-orange-500/25 mx-auto md:mx-0"
+            />
 
             <h3 className="text-3xl font-bold text-white mb-2">
               Sofia Gastrobar
