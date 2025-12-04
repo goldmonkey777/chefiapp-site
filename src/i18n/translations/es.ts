@@ -350,6 +350,44 @@ export const es = {
     },
   },
 
+  // Alternatives (Comparativo)
+  alternatives: {
+    badge: 'Comparativo',
+    title: 'ChefIApp vs. lo que ya existe en el mercado',
+    subtitle: 'Existen excelentes herramientas de workforce y gestión para hostelería. ChefIApp nace para quien quiere algo enfocado en personas, cultura y operación diaria del restaurante, sin peso corporativo.',
+    competitors: [
+      {
+        name: '7shifts',
+        focus: 'Turnos y nómina para restaurantes',
+        whyChefIApp: 'Si quieres menos enfoque en nómina y más en involucrar al equipo en las operaciones diarias, ChefIApp se centra en tareas, gamificación y check-in en el piso del restaurante.',
+      },
+      {
+        name: 'Harri',
+        focus: 'HCM y workforce para grandes cadenas de hostelería',
+        whyChefIApp: 'Harri es genial para grandes grupos; ChefIApp nace para restaurantes independientes y grupos más pequeños que necesitan algo simple, bonito y rápido de implementar.',
+      },
+      {
+        name: 'Fourth / HotSchedules',
+        focus: 'Workforce + inventario para hostelería y QSR',
+        whyChefIApp: 'Mientras esos sistemas cubren todo, ChefIApp es obsesivo en cultura de equipo, gamificación y UX para el día a día del restaurante.',
+      },
+      {
+        name: 'Unifocus',
+        focus: 'Workforce management para cadenas hoteleras',
+        whyChefIApp: '¿Tus hoteles o hostels no son una mega cadena? ChefIApp trae la disciplina de WFM para operaciones más pequeñas, sin requerir un ejército de TI.',
+      },
+      {
+        name: 'HelloShift / STAY',
+        focus: 'Colaboración y tareas para personal de hotel',
+        whyChefIApp: 'ChefIApp es perfecto cuando la prioridad es calidad de servicio y disciplina diaria del equipo, con ranking, XP y checklists configurados para F&B.',
+      },
+    ],
+    cta: 'En lugar de competir en todo, ChefIApp elige un lugar claro en el mapa:',
+    ctaHighlight: 'ser la app definitiva de gestión de equipo para restaurantes, bares, hoteles y caterings que viven la operación de verdad.',
+    focusLabel: 'Enfoque:',
+    visitSite: 'Ver sitio',
+  },
+
   // Footer
   footer: {
     description: 'Plataforma de inteligencia para gestión de equipos de hostelería.',

@@ -39,12 +39,12 @@ const productSchema = {
   '@type': 'SoftwareApplication',
   name: 'ChefIApp',
   applicationCategory: 'BusinessApplication',
-  applicationSubCategory: 'Hospitality Management Software',
+  applicationSubCategory: 'Hospitality workforce management',
   operatingSystem: 'iOS, Android, Web',
-  description: 'App de gestão de equipe para restaurantes com gamificação, check-in GPS, tarefas e dashboards em tempo real',
+  description: 'App de gestão de equipe para restaurantes com gamificação, check-in GPS, tarefas e dashboards em tempo real. Alternativa moderna a 7shifts, Harri, Fourth para restaurantes independentes.',
   offers: {
     '@type': 'Offer',
-    price: '0',
+    price: '29',
     priceCurrency: 'EUR',
     availability: 'https://schema.org/InStock',
     priceValidUntil: '2025-12-31'
@@ -57,8 +57,23 @@ const productSchema = {
     worstRating: '1'
   },
   author: organizationSchema,
-  image: 'https://chefiapp.com/og-image.svg',
-  screenshot: 'https://chefiapp.com/og-image.svg',
+  image: 'https://chefiapp.com/og-image.png',
+  screenshot: 'https://chefiapp.com/og-image.png',
+  // SEO Keywords - nicho específico
+  keywords: [
+    'app para restaurante',
+    'gestão de equipe para bares',
+    'hospitality workforce management',
+    'restaurant staff scheduling',
+    'restaurant gamification',
+    'hotel staff management',
+    'software gestão equipe hotel',
+    'alternativa 7shifts',
+    'alternativa harri',
+    'check-in gps funcionários',
+    'gamificação restaurante',
+    'checklists restaurante'
+  ],
   featureList: [
     'Gestão de tarefas e checklists',
     'Check-in GPS com validação de localização',

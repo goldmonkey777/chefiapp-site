@@ -9,6 +9,7 @@ import {
   Roadmap,
   LabPartner,
   SocialProof,
+  Alternatives,
   FAQ,
   EarlyAccess,
   Download,
@@ -65,6 +66,11 @@ export default function App() {
         {/* Social Proof Section */}
         <section id="social-proof" className="py-16 md:py-24">
           <SocialProof />
+        </section>
+
+        {/* Alternatives / Comparison Section */}
+        <section id="alternatives" className="py-16 md:py-24 bg-slate-900/30">
+          <Alternatives />
         </section>
 
         {/* FAQ Section */}

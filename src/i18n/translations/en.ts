@@ -350,6 +350,44 @@ export const en = {
     },
   },
 
+  // Alternatives (Comparison)
+  alternatives: {
+    badge: 'Comparison',
+    title: 'ChefIApp vs. What Already Exists',
+    subtitle: 'There are great workforce and management tools for hospitality. ChefIApp is born for those who want something focused on people, culture and daily restaurant operations, without corporate weight.',
+    competitors: [
+      {
+        name: '7shifts',
+        focus: 'Scheduling and payroll for restaurants',
+        whyChefIApp: 'If you want less payroll focus and more on engaging the team in daily operations, ChefIApp focuses on tasks, gamification and check-in on the restaurant floor.',
+      },
+      {
+        name: 'Harri',
+        focus: 'HCM and workforce for large hospitality chains',
+        whyChefIApp: 'Harri is great for large groups; ChefIApp is born for independent restaurants and smaller groups that need something simple, beautiful and quick to implement.',
+      },
+      {
+        name: 'Fourth / HotSchedules',
+        focus: 'Workforce + inventory for hospitality and QSR',
+        whyChefIApp: 'While these systems cover everything, ChefIApp is obsessive about team culture, gamification and UX for daily restaurant operations.',
+      },
+      {
+        name: 'Unifocus',
+        focus: 'Workforce management for hotel chains',
+        whyChefIApp: "Your hotels or hostels aren't a mega chain? ChefIApp brings WFM discipline to smaller operations, without requiring an IT army.",
+      },
+      {
+        name: 'HelloShift / STAY',
+        focus: 'Collaboration and tasks for hotel staff',
+        whyChefIApp: 'ChefIApp is perfect when the priority is service quality and daily team discipline, with ranking, XP and checklists configured for F&B.',
+      },
+    ],
+    cta: 'Instead of competing in everything, ChefIApp chooses a clear place on the map:',
+    ctaHighlight: 'to be the definitive team management app for restaurants, bars, hotels and caterers who live the real operation.',
+    focusLabel: 'Focus:',
+    visitSite: 'Visit site',
+  },
+
   // Footer
   footer: {
     description: 'Intelligence platform for hospitality team management.',

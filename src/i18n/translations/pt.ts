@@ -350,6 +350,44 @@ export const pt = {
     },
   },
 
+  // Alternatives (Comparativo)
+  alternatives: {
+    badge: 'Comparativo',
+    title: 'ChefIApp vs. o que já existe no mercado',
+    subtitle: 'Existem ótimas ferramentas de workforce e gestão para hospitality. O ChefIApp nasce para quem quer algo focado em pessoas, cultura e operação diária do restaurante, sem peso corporativo.',
+    competitors: [
+      {
+        name: '7shifts',
+        focus: 'Escala e folha de pagamento para restaurantes',
+        whyChefIApp: 'Se você quer menos folha e mais foco em engajar a equipe na operação diária, o ChefIApp foca em tarefas, gamificação e check-in no chão do restaurante.',
+      },
+      {
+        name: 'Harri',
+        focus: 'HCM e workforce para grandes redes de hospitality',
+        whyChefIApp: 'Harri é ótimo para grandes grupos; o ChefIApp nasce para restaurantes independentes e grupos menores que precisam de algo simples, bonito e rápido de implantar.',
+      },
+      {
+        name: 'Fourth / HotSchedules',
+        focus: 'Workforce + inventário para hotelaria e QSR',
+        whyChefIApp: 'Enquanto esses sistemas cobrem tudo, o ChefIApp é obsessivo em cultura de equipe, gamificação e UX para o dia a dia do restaurante.',
+      },
+      {
+        name: 'Unifocus',
+        focus: 'Workforce management para cadeias de hotéis',
+        whyChefIApp: 'Seus hotéis ou hostels não são uma mega rede? O ChefIApp traz a disciplina de WFM para operações menores, sem exigir um exército de TI.',
+      },
+      {
+        name: 'HelloShift / STAY',
+        focus: 'Colaboração e tarefas para staff de hotel',
+        whyChefIApp: 'ChefIApp é perfeito quando a prioridade é qualidade do serviço e disciplina diária da equipe, com ranking, XP e checklists configurados para F&B.',
+      },
+    ],
+    cta: 'Em vez de competir em tudo, o ChefIApp escolhe um lugar claro no mapa:',
+    ctaHighlight: 'ser o app definitivo de gestão de equipe para restaurantes, bares, hotéis e buffets que vivem a operação de verdade.',
+    focusLabel: 'Foco:',
+    visitSite: 'Ver site',
+  },
+
   // Footer
   footer: {
     description: 'Plataforma de inteligência para gestão de equipas de hospitalidade.',
