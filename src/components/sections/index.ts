@@ -1,0 +1,10 @@
+export { Hero } from './Hero'
+export { ForWho } from './ForWho'
+export { HowItWorks } from './HowItWorks'
+export { Roadmap } from './Roadmap'
+export { WhyDifferent } from './WhyDifferent'
+export { Features } from './Features'
+export { EarlyAccess } from './EarlyAccess'
+export { Download } from './Download'
+export { Founder } from './Founder'
+

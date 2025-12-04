@@ -1,0 +1,88 @@
+@import url('https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:ital,wght@0,200..800;1,200..800&display=swap');
+
+@import "tailwindcss";
+
+@theme {
+  --color-chef-orange: #F97316;
+  --color-chef-dark: #0F172A;
+  --color-chef-slate: #1E293B;
+  --color-chef-light: #F8FAFC;
+  
+  --font-sans: 'Plus Jakarta Sans', system-ui, sans-serif;
+}
+
+@keyframes float {
+  0%, 100% { transform: translateY(0); }
+  50% { transform: translateY(-10px); }
+}
+
+@layer base {
+  html {
+    scroll-behavior: smooth;
+  }
+  
+  body {
+    font-family: 'Plus Jakarta Sans', system-ui, sans-serif;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    background-color: #020617;
+    color: #f8fafc;
+    margin: 0;
+    padding: 0;
+  }
+  
+  ::selection {
+    background-color: rgba(249, 115, 22, 0.3);
+    color: white;
+  }
+}
+
+@layer components {
+  .glass-card {
+    background: rgba(255, 255, 255, 0.05);
+    backdrop-filter: blur(24px);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    border-radius: 1rem;
+  }
+  
+  .section-title {
+    font-size: clamp(1.875rem, 5vw, 3rem);
+    font-weight: 700;
+    letter-spacing: -0.025em;
+  }
+  
+  .section-subtitle {
+    font-size: clamp(1.125rem, 2vw, 1.25rem);
+    color: #94a3b8;
+    max-width: 42rem;
+  }
+  
+  .gradient-text {
+    background: linear-gradient(90deg, #F97316, #FB923C, #FBBF24);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+  }
+  
+  .animate-float {
+    animation: float 6s ease-in-out infinite;
+  }
+}
+
+/* Custom scrollbar */
+::-webkit-scrollbar {
+  width: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: #020617;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #1e293b;
+  border-radius: 9999px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #334155;
+}
