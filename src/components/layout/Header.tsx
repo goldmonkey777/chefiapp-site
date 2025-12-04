@@ -1,17 +1,20 @@
 import { useState, useEffect } from 'react'
 import { motion, AnimatePresence } from 'framer-motion'
 import { Menu, X } from 'lucide-react'
-
-const navItems = [
-  { label: 'Para quem é', href: '#for-who' },
-  { label: 'Como funciona', href: '#how-it-works' },
-  { label: 'Funcionalidades', href: '#features' },
-  { label: 'Roadmap', href: '#roadmap' },
-]
+import { useT } from '../../i18n'
+import { LanguageSelector } from '../ui/LanguageSelector'
 
 export function Header() {
+  const t = useT()
   const [isScrolled, setIsScrolled] = useState(false)
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false)
+
+  const navItems = [
+    { label: t.forWho.title, href: '#for-who' },
+    { label: t.howItWorks.title, href: '#how-it-works' },
+    { label: t.features.title, href: '#features' },
+    { label: t.roadmap.title, href: '#roadmap' },
+  ]
 
   useEffect(() => {
     const handleScroll = () => {
@@ -39,7 +42,7 @@ export function Header() {
           </a>
 
           {/* Desktop Navigation */}
-          <nav className="hidden md:flex items-center gap-8">
+          <nav className="hidden md:flex items-center gap-6">
             {navItems.map((item) => (
               <a
                 key={item.href}
@@ -51,23 +54,27 @@ export function Header() {
             ))}
           </nav>
 
-          {/* CTA Button */}
-          <div className="hidden md:block">
+          {/* Right side: Language + CTA */}
+          <div className="hidden md:flex items-center gap-4">
+            <LanguageSelector />
             <a
               href="#early-access"
               className="px-5 py-2.5 bg-gradient-to-r from-orange-500 to-orange-600 text-white text-sm font-semibold rounded-lg hover:shadow-lg hover:shadow-orange-500/25 transition-all"
             >
-              Quero testar
+              {t.header.earlyAccess}
             </a>
           </div>
 
           {/* Mobile Menu Button */}
-          <button
-            className="md:hidden p-2 text-slate-400 hover:text-white"
-            onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
-          >
-            {isMobileMenuOpen ? <X size={24} /> : <Menu size={24} />}
-          </button>
+          <div className="md:hidden flex items-center gap-2">
+            <LanguageSelector />
+            <button
+              className="p-2 text-slate-400 hover:text-white"
+              onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
+            >
+              {isMobileMenuOpen ? <X size={24} /> : <Menu size={24} />}
+            </button>
+          </div>
         </div>
       </div>
 
@@ -96,7 +103,7 @@ export function Header() {
                 onClick={() => setIsMobileMenuOpen(false)}
                 className="mt-2 px-4 py-3 bg-gradient-to-r from-orange-500 to-orange-600 text-white font-semibold rounded-lg text-center"
               >
-                Quero testar
+                {t.header.earlyAccess}
               </a>
             </nav>
           </motion.div>

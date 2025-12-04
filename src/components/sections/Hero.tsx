@@ -1,7 +1,17 @@
 import { motion } from 'framer-motion'
 import { ArrowRight, Play } from 'lucide-react'
+import { useT } from '../../i18n'
 
 export function Hero() {
+  const t = useT()
+  
+  const businessTypes = [
+    { emoji: '🍽️', labelKey: 0 },
+    { emoji: '🍸', labelKey: 1 },
+    { emoji: '🏨', labelKey: 2 },
+    { emoji: '🎉', labelKey: 3 },
+  ]
+
   return (
     <section className="pt-20 pb-16 md:pt-28 md:pb-20 px-4">
       <motion.div
@@ -32,7 +42,7 @@ export function Hero() {
           className="inline-flex items-center gap-2 rounded-full border border-orange-500/30 bg-orange-500/10 px-4 py-1.5 text-sm text-orange-300"
         >
           <span className="w-2 h-2 bg-orange-400 rounded-full animate-pulse" />
-          Beta aberto para restaurantes selecionados
+          {t.hero.badge}
         </motion.div>
 
         {/* Title */}
@@ -42,8 +52,8 @@ export function Hero() {
           transition={{ delay: 0.3 }}
           className="text-4xl md:text-5xl lg:text-6xl font-bold tracking-tight leading-tight"
         >
-          Controle total da sua{' '}
-          <span className="gradient-text">equipe de restaurante</span>
+          {t.hero.title}{' '}
+          <span className="gradient-text">{t.hero.titleHighlight}</span>
         </motion.h1>
 
         {/* Subtitle */}
@@ -53,8 +63,7 @@ export function Hero() {
           transition={{ delay: 0.4 }}
           className="text-lg md:text-xl text-slate-300 max-w-2xl mx-auto"
         >
-          Plataforma de gestão de equipe para hospitality. Tarefas, check-in, 
-          gamificação e dashboards — tudo num só lugar.
+          {t.hero.subtitle}
         </motion.p>
 
         {/* CTAs */}
@@ -68,7 +77,7 @@ export function Hero() {
             href="#early-access"
             className="inline-flex items-center justify-center gap-2 px-6 py-3 bg-gradient-to-r from-orange-500 to-orange-600 text-white font-semibold rounded-xl shadow-lg shadow-orange-500/25 hover:shadow-orange-500/40 hover:scale-105 transition-all duration-300"
           >
-            Quero testar no meu restaurante
+            {t.hero.cta}
             <ArrowRight size={18} />
           </a>
           <a
@@ -76,7 +85,7 @@ export function Hero() {
             className="inline-flex items-center justify-center gap-2 px-6 py-3 bg-white/10 border border-white/20 text-white font-semibold rounded-xl hover:bg-white/20 transition-all duration-300"
           >
             <Play size={18} />
-            Ver como funciona
+            {t.hero.ctaSecondary}
           </a>
         </motion.div>
 
@@ -87,24 +96,17 @@ export function Hero() {
           transition={{ delay: 0.6 }}
           className="pt-10"
         >
-          <p className="text-sm text-slate-500 mb-4">Funciona para:</p>
           <div className="flex flex-wrap gap-3 justify-center">
-            {[
-              { emoji: '🍽️', label: 'Restaurantes' },
-              { emoji: '🍸', label: 'Bares' },
-              { emoji: '🏨', label: 'Hotéis' },
-              { emoji: '🏠', label: 'Hostels' },
-              { emoji: '🎉', label: 'Buffets' },
-            ].map((type, i) => (
+            {businessTypes.map((type, i) => (
               <motion.span
-                key={type.label}
+                key={i}
                 initial={{ opacity: 0, scale: 0.8 }}
                 animate={{ opacity: 1, scale: 1 }}
                 transition={{ delay: 0.7 + i * 0.1 }}
                 whileHover={{ scale: 1.05 }}
                 className="px-4 py-2 bg-white/5 border border-white/10 rounded-full text-sm text-slate-300 cursor-default"
               >
-                {type.emoji} {type.label}
+                {type.emoji} {t.forWho.items[type.labelKey].title}
               </motion.span>
             ))}
           </div>
@@ -117,7 +119,7 @@ export function Hero() {
           transition={{ delay: 1 }}
           className="text-sm text-slate-500 pt-6"
         >
-          From Ibiza with Love — by goldmonkey.studio
+          {t.hero.fromIbiza} — by goldmonkey.studio
         </motion.p>
       </motion.div>
     </section>

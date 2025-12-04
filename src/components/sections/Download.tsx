@@ -1,7 +1,10 @@
 import { motion } from 'framer-motion'
 import { Smartphone, Apple, PlayCircle } from 'lucide-react'
+import { useT } from '../../i18n'
 
 export function Download() {
+  const t = useT()
+  
   return (
     <div className="max-w-4xl mx-auto px-4">
       <motion.div
@@ -16,11 +19,11 @@ export function Download() {
         </div>
 
         <h2 className="text-2xl md:text-3xl font-bold text-white mb-4">
-          Baixe o app e comece hoje
+          {t.download.title}
         </h2>
         
         <p className="text-slate-400 max-w-xl mx-auto mb-8">
-          Disponível para iOS e Android. Também funciona como PWA — instale diretamente do navegador.
+          {t.download.subtitle}
         </p>
 
         <div className="flex flex-col sm:flex-row items-center justify-center gap-4">
@@ -29,12 +32,12 @@ export function Download() {
             href="#"
             whileHover={{ scale: 1.05 }}
             whileTap={{ scale: 0.95 }}
-            className="flex items-center gap-3 px-6 py-3 bg-white rounded-xl text-slate-900 hover:bg-slate-100 transition-colors"
+            className="flex items-center gap-3 px-6 py-3 bg-white/10 border border-white/20 rounded-xl text-white hover:bg-white/20 transition-colors"
           >
             <Apple size={28} />
             <div className="text-left">
-              <p className="text-xs text-slate-500">Baixar na</p>
-              <p className="font-semibold">App Store</p>
+              <p className="text-xs text-slate-400">{t.download.comingSoon}</p>
+              <p className="font-semibold">{t.download.appStore}</p>
             </div>
           </motion.a>
 
@@ -43,19 +46,22 @@ export function Download() {
             href="#"
             whileHover={{ scale: 1.05 }}
             whileTap={{ scale: 0.95 }}
-            className="flex items-center gap-3 px-6 py-3 bg-white rounded-xl text-slate-900 hover:bg-slate-100 transition-colors"
+            className="flex items-center gap-3 px-6 py-3 bg-white/10 border border-white/20 rounded-xl text-white hover:bg-white/20 transition-colors"
           >
             <PlayCircle size={28} />
             <div className="text-left">
-              <p className="text-xs text-slate-500">Disponível no</p>
-              <p className="font-semibold">Google Play</p>
+              <p className="text-xs text-slate-400">{t.download.comingSoon}</p>
+              <p className="font-semibold">{t.download.googlePlay}</p>
             </div>
           </motion.a>
         </div>
 
-        <p className="mt-6 text-sm text-slate-500">
-          Em breve nas lojas oficiais. Por agora, acesse via web ou instale como PWA.
-        </p>
+        <a
+          href="#early-access"
+          className="inline-block mt-6 text-sm text-orange-400 hover:text-orange-300 transition-colors"
+        >
+          {t.download.notifyMe} →
+        </a>
       </motion.div>
     </div>
   )

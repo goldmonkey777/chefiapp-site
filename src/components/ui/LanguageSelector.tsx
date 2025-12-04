@@ -1,7 +1,8 @@
 import { useState, useRef, useEffect } from 'react'
 import { motion, AnimatePresence } from 'framer-motion'
 import { ChevronDown, Globe } from 'lucide-react'
-import { useTranslation, languages, Language } from '../../i18n'
+import { useTranslation, languages } from '../../i18n'
+import type { Language } from '../../i18n'
 
 export function LanguageSelector() {
   const { language, setLanguage } = useTranslation()

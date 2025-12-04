@@ -2,14 +2,7 @@ import { useState } from 'react'
 import { motion } from 'framer-motion'
 import { Send, CheckCircle, AlertCircle, Sparkles } from 'lucide-react'
 import { supabase } from '../../lib/supabase'
-
-const businessTypes = [
-  { value: 'restaurante', label: 'Restaurante' },
-  { value: 'bar', label: 'Bar / Pub' },
-  { value: 'hotel', label: 'Hotel / Hostel' },
-  { value: 'buffet', label: 'Buffet / Catering' },
-  { value: 'outro', label: 'Outro' },
-]
+import { useT } from '../../i18n'
 
 interface FormData {
   restaurant_name: string
@@ -30,6 +23,7 @@ const initialFormData: FormData = {
 }
 
 export function EarlyAccess() {
+  const t = useT()
   const [formData, setFormData] = useState<FormData>(initialFormData)
   const [isSubmitting, setIsSubmitting] = useState(false)
   const [submitted, setSubmitted] = useState(false)
@@ -62,7 +56,7 @@ export function EarlyAccess() {
       setFormData(initialFormData)
     } catch (err) {
       console.error('Error submitting form:', err)
-      setError('Algo deu errado ao enviar. Tenta novamente em instantes.')
+      setError(t.earlyAccess.error.message)
     } finally {
       setIsSubmitting(false)
     }
@@ -80,13 +74,12 @@ export function EarlyAccess() {
             <CheckCircle size={32} className="text-green-400" />
           </div>
           <h3 className="text-2xl font-bold text-white mb-3">
-            Recebemos os seus dados! 🎉
+            {t.earlyAccess.success.title}
           </h3>
           <p className="text-slate-300 mb-6">
-            Vamos falar consigo para ver se o ChefIApp encaixa na sua operação.
+            {t.earlyAccess.success.message}
           </p>
           <p className="text-sm text-slate-500">
-            Obrigado por confiar no projeto.<br />
             From Ibiza with Love — by goldmonkey.studio
           </p>
         </motion.div>
@@ -105,15 +98,14 @@ export function EarlyAccess() {
       >
         <span className="inline-flex items-center gap-2 px-4 py-2 bg-orange-500/10 border border-orange-500/20 rounded-full mb-6">
           <Sparkles size={16} className="text-orange-400" />
-          <span className="text-sm font-medium text-orange-400">Vagas Limitadas</span>
+          <span className="text-sm font-medium text-orange-400">{t.earlyAccess.badge}</span>
         </span>
         
         <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
-          Early Access para restaurantes selecionados
+          {t.earlyAccess.title}
         </h2>
         <p className="text-lg text-slate-400 max-w-2xl mx-auto">
-          Estamos a abrir o ChefIApp™ primeiro para restaurantes, bares, hotéis, 
-          hostels e buffets que queiram testar o sistema no dia a dia.
+          {t.earlyAccess.subtitle}
         </p>
       </motion.div>
 
@@ -129,14 +121,14 @@ export function EarlyAccess() {
           {/* Restaurant Name */}
           <div className="md:col-span-2">
             <label className="block text-sm font-medium text-slate-300 mb-2">
-              Nome do restaurante *
+              {t.earlyAccess.form.restaurantName} *
             </label>
             <input
               type="text"
               name="restaurant_name"
               value={formData.restaurant_name}
               onChange={handleChange}
-              placeholder="Ex: Sofia Gastrobar"
+              placeholder={t.earlyAccess.form.restaurantNamePlaceholder}
               required
               className="w-full px-4 py-3 bg-slate-800/50 border border-slate-700 rounded-xl text-white placeholder-slate-500 focus:outline-none focus:ring-2 focus:ring-orange-500/50 focus:border-orange-500/50 transition-all"
             />
@@ -145,7 +137,7 @@ export function EarlyAccess() {
           {/* Business Type */}
           <div>
             <label className="block text-sm font-medium text-slate-300 mb-2">
-              Tipo de negócio *
+              {t.earlyAccess.form.businessType} *
             </label>
             <select
               name="business_type"
@@ -154,8 +146,8 @@ export function EarlyAccess() {
               required
               className="w-full px-4 py-3 bg-slate-800/50 border border-slate-700 rounded-xl text-white focus:outline-none focus:ring-2 focus:ring-orange-500/50 focus:border-orange-500/50 transition-all"
             >
-              <option value="">Selecione...</option>
-              {businessTypes.map((type) => (
+              <option value="">{t.earlyAccess.form.businessTypePlaceholder}</option>
+              {t.earlyAccess.form.businessTypes.map((type) => (
                 <option key={type.value} value={type.value}>
                   {type.label}
                 </option>
@@ -166,14 +158,14 @@ export function EarlyAccess() {
           {/* City/Country */}
           <div>
             <label className="block text-sm font-medium text-slate-300 mb-2">
-              Cidade / País *
+              {t.earlyAccess.form.cityCountry} *
             </label>
             <input
               type="text"
               name="city_country"
               value={formData.city_country}
               onChange={handleChange}
-              placeholder="Ibiza, Espanha"
+              placeholder={t.earlyAccess.form.cityCountryPlaceholder}
               required
               className="w-full px-4 py-3 bg-slate-800/50 border border-slate-700 rounded-xl text-white placeholder-slate-500 focus:outline-none focus:ring-2 focus:ring-orange-500/50 focus:border-orange-500/50 transition-all"
             />
@@ -182,30 +174,35 @@ export function EarlyAccess() {
           {/* Employee Count */}
           <div>
             <label className="block text-sm font-medium text-slate-300 mb-2">
-              Número de funcionários *
+              {t.earlyAccess.form.employeeCount} *
             </label>
-            <input
-              type="text"
+            <select
               name="employee_count"
               value={formData.employee_count}
               onChange={handleChange}
-              placeholder="Ex: 8, 15, 30..."
               required
-              className="w-full px-4 py-3 bg-slate-800/50 border border-slate-700 rounded-xl text-white placeholder-slate-500 focus:outline-none focus:ring-2 focus:ring-orange-500/50 focus:border-orange-500/50 transition-all"
-            />
+              className="w-full px-4 py-3 bg-slate-800/50 border border-slate-700 rounded-xl text-white focus:outline-none focus:ring-2 focus:ring-orange-500/50 focus:border-orange-500/50 transition-all"
+            >
+              <option value="">{t.earlyAccess.form.employeeCountPlaceholder}</option>
+              {t.earlyAccess.form.employeeCounts.map((count) => (
+                <option key={count.value} value={count.value}>
+                  {count.label}
+                </option>
+              ))}
+            </select>
           </div>
 
           {/* Contact */}
           <div>
             <label className="block text-sm font-medium text-slate-300 mb-2">
-              WhatsApp ou Email *
+              {t.earlyAccess.form.contact} *
             </label>
             <input
               type="text"
               name="contact"
               value={formData.contact}
               onChange={handleChange}
-              placeholder="+34 612 345 678"
+              placeholder={t.earlyAccess.form.contactPlaceholder}
               required
               className="w-full px-4 py-3 bg-slate-800/50 border border-slate-700 rounded-xl text-white placeholder-slate-500 focus:outline-none focus:ring-2 focus:ring-orange-500/50 focus:border-orange-500/50 transition-all"
             />
@@ -214,13 +211,13 @@ export function EarlyAccess() {
           {/* Pain Point */}
           <div className="md:col-span-2">
             <label className="block text-sm font-medium text-slate-300 mb-2">
-              O que mais dói hoje na gestão da sua equipe?
+              {t.earlyAccess.form.painPoint}
             </label>
             <textarea
               name="main_pain_point"
               value={formData.main_pain_point}
               onChange={handleChange}
-              placeholder="Conte-nos em 1–2 frases o maior problema que você quer resolver..."
+              placeholder={t.earlyAccess.form.painPointPlaceholder}
               rows={3}
               className="w-full px-4 py-3 bg-slate-800/50 border border-slate-700 rounded-xl text-white placeholder-slate-500 focus:outline-none focus:ring-2 focus:ring-orange-500/50 focus:border-orange-500/50 transition-all resize-none"
             />
@@ -250,23 +247,16 @@ export function EarlyAccess() {
                   <circle className="opacity-25" cx="12" cy="12" r="10" stroke="currentColor" strokeWidth="4" />
                   <path className="opacity-75" fill="currentColor" d="M4 12a8 8 0 018-8V0C5.373 0 0 5.373 0 12h4zm2 5.291A7.962 7.962 0 014 12H0c0 3.042 1.135 5.824 3 7.938l3-2.647z" />
                 </svg>
-                Enviando...
+                {t.earlyAccess.form.submitting}
               </>
             ) : (
               <>
                 <Send size={18} />
-                Quero ser um dos primeiros restaurantes
+                {t.earlyAccess.form.submit}
               </>
             )}
           </motion.button>
         </div>
-
-        <p className="mt-4 text-xs text-slate-500 text-center">
-          Ao enviar, você concorda com nossa{' '}
-          <a href="/legal/privacy.html" className="text-orange-400 hover:underline">
-            política de privacidade
-          </a>.
-        </p>
       </motion.form>
     </div>
   )
