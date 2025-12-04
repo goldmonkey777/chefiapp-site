@@ -113,13 +113,13 @@ export function Footer() {
                 {t.footer.links.terms}
               </a>
               <a href="/legal/trademark.html" className="text-slate-400 hover:text-white transition-colors">
-                Trademark
+                {t.footer.links.trademark}
               </a>
               <a href="/invest.html" className="text-slate-400 hover:text-white transition-colors">
-                Investors
+                {t.footer.links.invest}
               </a>
               <a href="/about.html" className="text-slate-400 hover:text-white transition-colors">
-                {t.footer.links.about || 'About'}
+                {t.footer.links.about}
               </a>
             </div>
             <div className="flex items-center gap-1 text-sm text-slate-500 mt-4">
