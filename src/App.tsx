@@ -14,10 +14,16 @@ import {
   Download,
   Founder,
 } from './components/sections'
+import { StructuredData } from './components/seo/StructuredData'
+import { Analytics } from './components/analytics/Analytics'
 
 export default function App() {
   return (
     <div className="min-h-screen bg-slate-950 text-slate-50">
+      {/* SEO & Analytics - Silicon Valley Level */}
+      <StructuredData />
+      <Analytics />
+
       <Header />
 
       <main>

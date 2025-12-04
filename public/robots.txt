@@ -1,0 +1,86 @@
+# robots.txt for ChefIApp™
+# Generated: 2025-12-04
+# Silicon Valley SEO Standards
+
+# Allow all crawlers
+User-agent: *
+Allow: /
+
+# Specific rules for major search engines
+User-agent: Googlebot
+Allow: /
+Crawl-delay: 0
+
+User-agent: Googlebot-Image
+Allow: /
+
+User-agent: Bingbot
+Allow: /
+Crawl-delay: 0
+
+User-agent: Slurp
+Allow: /
+
+# Social media crawlers
+User-agent: facebookexternalhit
+Allow: /
+
+User-agent: Twitterbot
+Allow: /
+
+User-agent: LinkedInBot
+Allow: /
+
+# Block bad bots
+User-agent: AhrefsBot
+Disallow: /
+
+User-agent: SemrushBot
+Disallow: /
+
+User-agent: DotBot
+Disallow: /
+
+# AI Crawlers (allow for better AI indexing)
+User-agent: GPTBot
+Allow: /
+
+User-agent: ChatGPT-User
+Allow: /
+
+User-agent: anthropic-ai
+Allow: /
+
+User-agent: ClaudeBot
+Allow: /
+
+# Sitemap location
+Sitemap: https://chefiapp.com/sitemap.xml
+
+# Homepage
+Allow: /index.html
+Allow: /*.css
+Allow: /*.js
+Allow: /*.png
+Allow: /*.jpg
+Allow: /*.jpeg
+Allow: /*.webp
+Allow: /*.svg
+Allow: /*.gif
+
+# Legal pages
+Allow: /legal/privacy.html
+Allow: /legal/terms.html
+
+# Partners
+Allow: /partners/*
+
+# Disallow admin/private areas (if any in future)
+Disallow: /admin/
+Disallow: /.well-known/
+Disallow: /api/private/
+
+# Host
+Host: chefiapp.com
+
+# From Ibiza with Love — by goldmonkey.studio
