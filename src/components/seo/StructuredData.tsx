@@ -184,15 +184,197 @@ const localBusinessSchema = {
   acceptsReservations: true
 }
 
+// Topics Graph - Semantic relationships for SEO dominance
+// This connects ChefIApp to the entire hospitality software ecosystem
+const topicsGraphSchema = {
+  '@context': 'https://schema.org',
+  '@type': 'WebPage',
+  '@id': 'https://chefiapp.com',
+  name: 'ChefIApp - Hospitality Workforce Management Platform',
+  description: 'The complete workforce management solution for restaurants, bars, hotels, and hospitality businesses',
+  
+  // Semantic knowledge topics - what ChefIApp knows about
+  about: [
+    {
+      '@type': 'Thing',
+      name: 'Restaurant Staff Scheduling',
+      description: 'Digital scheduling and shift management for restaurant teams'
+    },
+    {
+      '@type': 'Thing',
+      name: 'Hospitality Workforce Management',
+      description: 'Complete workforce solutions for hotels, restaurants, and bars'
+    },
+    {
+      '@type': 'Thing',
+      name: 'Employee Gamification',
+      description: 'Using game mechanics to motivate and engage staff'
+    },
+    {
+      '@type': 'Thing',
+      name: 'GPS Time Tracking',
+      description: 'Location-based attendance and time tracking systems'
+    },
+    {
+      '@type': 'Thing',
+      name: 'Restaurant Operations Management',
+      description: 'Daily task management and checklists for food service'
+    },
+    {
+      '@type': 'Thing',
+      name: 'Hotel Staff Coordination',
+      description: 'Team coordination systems for hospitality properties'
+    },
+    {
+      '@type': 'Thing',
+      name: 'F&B Team Management',
+      description: 'Food and beverage service team management tools'
+    },
+    {
+      '@type': 'Thing',
+      name: 'Employee Engagement Software',
+      description: 'Tools for improving workplace engagement and retention'
+    }
+  ],
+  
+  // Industry categories ChefIApp serves
+  audience: {
+    '@type': 'Audience',
+    audienceType: 'Hospitality Industry Professionals',
+    geographicArea: {
+      '@type': 'AdministrativeArea',
+      name: 'Global',
+      containsPlace: [
+        { '@type': 'Country', name: 'Spain' },
+        { '@type': 'Country', name: 'Portugal' },
+        { '@type': 'Country', name: 'Brazil' },
+        { '@type': 'Country', name: 'Mexico' },
+        { '@type': 'Country', name: 'United States' },
+        { '@type': 'Country', name: 'United Kingdom' },
+        { '@type': 'Country', name: 'France' },
+        { '@type': 'Country', name: 'Italy' },
+        { '@type': 'Country', name: 'Germany' }
+      ]
+    }
+  },
+  
+  // Related concepts and keywords for semantic SEO
+  keywords: [
+    // Restaurant focused
+    'restaurant staff scheduling software',
+    'restaurant employee management',
+    'restaurant task management app',
+    'restaurant checklist software',
+    'kitchen staff coordination',
+    'bar team management',
+    'food service workforce',
+    
+    // Hotel focused
+    'hotel staff management software',
+    'hospitality workforce solutions',
+    'hotel operations platform',
+    'housekeeping task management',
+    
+    // Feature focused
+    'employee gamification platform',
+    'GPS time tracking hospitality',
+    'real-time staff dashboard',
+    'employee XP and leveling system',
+    'team ranking and leaderboards',
+    
+    // Problem focused
+    'reduce restaurant turnover',
+    'improve staff engagement',
+    'automate restaurant operations',
+    'digital time clock hospitality',
+    
+    // Comparison focused
+    'alternative to 7shifts',
+    'alternative to harri',
+    'alternative to fourth hotschedules',
+    'alternative to deputy',
+    'alternative to when i work',
+    
+    // Language specific
+    'gestão equipe restaurante',
+    'app para restaurante',
+    'software hotelaria',
+    'gestión equipo restaurante',
+    'aplicación para restaurantes'
+  ],
+  
+  // Breadcrumb for navigation
+  breadcrumb: {
+    '@type': 'BreadcrumbList',
+    itemListElement: [
+      {
+        '@type': 'ListItem',
+        position: 1,
+        name: 'Home',
+        item: 'https://chefiapp.com'
+      },
+      {
+        '@type': 'ListItem',
+        position: 2,
+        name: 'Features',
+        item: 'https://chefiapp.com/#features'
+      },
+      {
+        '@type': 'ListItem',
+        position: 3,
+        name: 'Comparisons',
+        item: 'https://chefiapp.com/#alternatives'
+      },
+      {
+        '@type': 'ListItem',
+        position: 4,
+        name: 'Early Access',
+        item: 'https://chefiapp.com/#early-access'
+      }
+    ]
+  },
+  
+  // Site links searchbox potential
+  potentialAction: {
+    '@type': 'SearchAction',
+    target: {
+      '@type': 'EntryPoint',
+      urlTemplate: 'https://chefiapp.com/compare/{search_term_string}.html'
+    },
+    'query-input': 'required name=search_term_string'
+  }
+}
+
+// WebSite schema for sitelinks
+const websiteSchema = {
+  '@context': 'https://schema.org',
+  '@type': 'WebSite',
+  '@id': 'https://chefiapp.com/#website',
+  url: 'https://chefiapp.com',
+  name: 'ChefIApp',
+  description: 'Gestão inteligente de equipe para restaurantes, bares e hotéis',
+  publisher: {
+    '@id': 'https://chefiapp.com/#organization'
+  },
+  inLanguage: ['pt-BR', 'pt-PT', 'en', 'es'],
+  copyrightYear: 2025,
+  copyrightHolder: {
+    '@type': 'Organization',
+    name: 'goldmonkey.studio LLC'
+  }
+}
+
 export function StructuredData() {
   useEffect(() => {
-    // Insert all schemas into head
+    // Insert all schemas into head - SEO Dominion System™
     const schemas = [
       organizationSchema,
       productSchema,
       faqSchema,
       howToSchema,
-      localBusinessSchema
+      localBusinessSchema,
+      topicsGraphSchema,
+      websiteSchema
     ]
 
     const scriptElements: HTMLScriptElement[] = []

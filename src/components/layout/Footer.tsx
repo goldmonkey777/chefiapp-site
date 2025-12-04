@@ -80,21 +80,24 @@ export function Footer() {
             </div>
           </div>
 
-          {/* Company */}
+          {/* Resources / Guides */}
           <div className="flex flex-col items-center md:items-start gap-4">
-            <h4 className="text-sm font-semibold text-white">{t.footer.company}</h4>
+            <h4 className="text-sm font-semibold text-white">{t.footer.resources || 'Recursos'}</h4>
             <div className="flex flex-col items-center md:items-start gap-3 text-sm">
-              <a href="/#lab-partner" className="text-slate-400 hover:text-white transition-colors">
-                Sofia Gastrobar
+              <a href="/comparativo/gestao-equipe-restaurante.html" className="text-slate-400 hover:text-white transition-colors">
+                {t.footer.links.guide || 'Guia Completo'}
               </a>
-              <a href="/#founder" className="text-slate-400 hover:text-white transition-colors">
-                {t.founder.title}
+              <a href="/compare/7shifts.html" className="text-slate-400 hover:text-white transition-colors">
+                vs 7shifts
               </a>
-              <a href="/#early-access" className="text-slate-400 hover:text-white transition-colors">
-                {t.header.earlyAccess}
+              <a href="/compare/harri.html" className="text-slate-400 hover:text-white transition-colors">
+                vs Harri
               </a>
-              <a href="mailto:contact@goldmonkey.studio" className="text-slate-400 hover:text-white transition-colors">
-                {t.footer.links.contact}
+              <a href="/guides/gamification-for-restaurants.html" className="text-slate-400 hover:text-white transition-colors">
+                {t.footer.links.gamification || 'Gamificação'}
+              </a>
+              <a href="/sitemap.xml" className="text-slate-400 hover:text-white transition-colors">
+                Sitemap
               </a>
             </div>
           </div>

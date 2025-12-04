@@ -394,6 +394,7 @@ export const es = {
     product: 'Producto',
     company: 'Empresa',
     legal: 'Legal',
+    resources: 'Recursos',
     links: {
       features: 'Funcionalidades',
       pricing: 'Precios',
@@ -406,6 +407,8 @@ export const es = {
       privacy: 'Privacidad',
       terms: 'Términos',
       cookies: 'Cookies',
+      guide: 'Guía Completa',
+      gamification: 'Gamificación',
     },
     copyright: '© 2024 ChefIApp™. Todos los derechos reservados.',
     madeWith: 'Hecho con',
