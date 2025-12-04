@@ -1,4 +1,6 @@
-export const en = {
+import type { Translations } from '../context'
+
+export const en: Translations = {
   // Meta
   lang: 'en',
   langName: 'English',
