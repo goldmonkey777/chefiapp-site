@@ -122,8 +122,14 @@ export function Footer() {
         </div>
 
         {/* Bottom bar */}
-        <div className="pt-8 border-t border-slate-800 flex flex-col md:flex-row items-center justify-between gap-4 text-xs text-slate-500">
-          <p>{t.footer.copyright}</p>
+        <div className="pt-8 border-t border-slate-800 flex flex-col items-center gap-3 text-xs text-slate-500">
+          <div className="flex flex-col md:flex-row items-center gap-2 md:gap-4">
+            <p>{t.footer.copyright}</p>
+            <span className="hidden md:inline">·</span>
+            <p className="text-blue-400/80">{t.footer.usCompany || 'Registered in Wyoming, USA'}</p>
+            <span className="hidden md:inline">·</span>
+            <p className="text-orange-400/80">{t.footer.trademark || 'Trademark pending at USPTO'}</p>
+          </div>
           <p className="flex items-center gap-2">
             <span>🏝️ From Ibiza with Love</span>
             <span>—</span>

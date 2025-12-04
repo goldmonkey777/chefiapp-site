@@ -410,10 +410,12 @@ export const pt = {
       guide: 'Guia Completo',
       gamification: 'Gamificação',
     },
-    copyright: '© 2024 ChefIApp™. Todos os direitos reservados.',
+    copyright: '© 2025 Goldmonkey Studio LLC — ChefIApp™',
     madeWith: 'Feito com',
     inIbiza: 'em Ibiza',
     byStudio: 'by goldmonkey.studio',
+    usCompany: 'Registrada em Wyoming, EUA',
+    trademark: 'Marca em registro no USPTO',
   },
 }
 
