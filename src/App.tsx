@@ -7,6 +7,7 @@ import {
   Features,
   WhyDifferent,
   Roadmap,
+  LabPartner,
   SocialProof,
   FAQ,
   EarlyAccess,
@@ -50,8 +51,13 @@ export default function App() {
           <Roadmap />
         </section>
 
+        {/* Lab Partner - Sofia Gastrobar */}
+        <section id="lab-partner" className="py-16 md:py-24 bg-slate-900/30">
+          <LabPartner />
+        </section>
+
         {/* Social Proof Section */}
-        <section id="social-proof" className="py-16 md:py-24 bg-slate-900/30">
+        <section id="social-proof" className="py-16 md:py-24">
           <SocialProof />
         </section>
 

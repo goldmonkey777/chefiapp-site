@@ -10,21 +10,23 @@ const stats = [
 
 const testimonials = [
   {
-    quote: 'O ChefIApp transformou a forma como gerimos a equipe. A gamificação motivou todos.',
-    author: 'Maria Silva',
-    role: 'Gerente, Restaurante Porto',
+    quote: 'O ChefIApp nasceu no Sofia Gastrobar. Testamos tudo em operação real antes de lançar. A gamificação e check-in GPS mudaram completamente a gestão da equipe.',
+    author: 'Elder Miranda de Andrade',
+    role: 'Owner, Sofia Gastrobar Ibiza 🏝️',
     rating: 5,
+    featured: true,
   },
   {
-    quote: 'Check-in GPS eliminou problemas de controle de presença. Simples e eficaz.',
-    author: 'João Santos',
-    role: 'Owner, Bar Lisboa',
+    quote: 'Como primeiro restaurante a usar o ChefIApp, vimos a plataforma evoluir com nosso feedback. Essencial para qualquer restaurante moderno.',
+    author: 'Equipa Sofia Gastrobar',
+    role: 'Laboratório Oficial, Ibiza',
     rating: 5,
+    featured: true,
   },
   {
-    quote: 'As tarefas e checklists organizaram tudo. Nunca mais esquecemos nada importante.',
+    quote: 'As tarefas e checklists organizaram tudo. Check-in GPS eliminou problemas de presença. Recomendo totalmente!',
     author: 'Ana Costa',
-    role: 'Head Chef, Hotel Ibiza',
+    role: 'Manager, Hotel Boutique',
     rating: 5,
   },
 ]
@@ -80,7 +82,11 @@ export function SocialProof() {
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
             transition={{ duration: 0.5, delay: index * 0.1 }}
-            className="bg-slate-900/60 border border-slate-800 rounded-2xl p-6 hover:border-orange-500/30 transition-all"
+            className={`rounded-2xl p-6 hover:border-orange-500/30 transition-all ${
+              testimonial.featured
+                ? 'bg-gradient-to-br from-orange-500/10 to-orange-600/5 border-2 border-orange-500/30 shadow-lg shadow-orange-500/10'
+                : 'bg-slate-900/60 border border-slate-800'
+            }`}
           >
             {/* Stars */}
             <div className="flex gap-1 mb-4">
