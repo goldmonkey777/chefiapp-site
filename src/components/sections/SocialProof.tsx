@@ -1,0 +1,105 @@
+import { motion } from 'framer-motion'
+import { Star, Users, Building2, TrendingUp } from 'lucide-react'
+
+const stats = [
+  { icon: Star, value: '4.9/5', label: 'Rating médio' },
+  { icon: Users, value: '+5K', label: 'Usuários ativos' },
+  { icon: Building2, value: '+200', label: 'Restaurantes' },
+  { icon: TrendingUp, value: '40%', label: 'Aumento produtividade' },
+]
+
+const testimonials = [
+  {
+    quote: 'O ChefIApp transformou a forma como gerimos a equipe. A gamificação motivou todos.',
+    author: 'Maria Silva',
+    role: 'Gerente, Restaurante Porto',
+    rating: 5,
+  },
+  {
+    quote: 'Check-in GPS eliminou problemas de controle de presença. Simples e eficaz.',
+    author: 'João Santos',
+    role: 'Owner, Bar Lisboa',
+    rating: 5,
+  },
+  {
+    quote: 'As tarefas e checklists organizaram tudo. Nunca mais esquecemos nada importante.',
+    author: 'Ana Costa',
+    role: 'Head Chef, Hotel Ibiza',
+    rating: 5,
+  },
+]
+
+export function SocialProof() {
+  return (
+    <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      {/* Stats */}
+      <motion.div
+        initial={{ opacity: 0, y: 20 }}
+        whileInView={{ opacity: 1, y: 0 }}
+        viewport={{ once: true }}
+        transition={{ duration: 0.5 }}
+        className="grid grid-cols-2 md:grid-cols-4 gap-6 mb-16"
+      >
+        {stats.map((stat, index) => (
+          <motion.div
+            key={stat.label}
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            transition={{ duration: 0.5, delay: index * 0.1 }}
+            className="text-center p-6 rounded-2xl bg-slate-900/60 border border-slate-800 hover:border-orange-500/30 transition-all"
+          >
+            <stat.icon className="w-8 h-8 mx-auto mb-3 text-orange-500" />
+            <div className="text-3xl font-bold text-white mb-1">{stat.value}</div>
+            <div className="text-sm text-slate-400">{stat.label}</div>
+          </motion.div>
+        ))}
+      </motion.div>
+
+      {/* Testimonials */}
+      <motion.div
+        initial={{ opacity: 0, y: 20 }}
+        whileInView={{ opacity: 1, y: 0 }}
+        viewport={{ once: true }}
+        transition={{ duration: 0.5 }}
+        className="text-center mb-12"
+      >
+        <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
+          O que dizem nossos clientes
+        </h2>
+        <p className="text-lg text-slate-400 max-w-2xl mx-auto">
+          Restaurantes, bares e hotéis que já usam o ChefIApp no dia a dia
+        </p>
+      </motion.div>
+
+      <div className="grid md:grid-cols-3 gap-6">
+        {testimonials.map((testimonial, index) => (
+          <motion.div
+            key={index}
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            transition={{ duration: 0.5, delay: index * 0.1 }}
+            className="bg-slate-900/60 border border-slate-800 rounded-2xl p-6 hover:border-orange-500/30 transition-all"
+          >
+            {/* Stars */}
+            <div className="flex gap-1 mb-4">
+              {[...Array(testimonial.rating)].map((_, i) => (
+                <Star key={i} className="w-4 h-4 fill-orange-500 text-orange-500" />
+              ))}
+            </div>
+
+            {/* Quote */}
+            <p className="text-slate-300 mb-6 italic">"{testimonial.quote}"</p>
+
+            {/* Author */}
+            <div>
+              <div className="font-semibold text-white">{testimonial.author}</div>
+              <div className="text-sm text-slate-500">{testimonial.role}</div>
+            </div>
+          </motion.div>
+        ))}
+      </div>
+    </div>
+  )
+}
