@@ -102,7 +102,7 @@ export function Footer() {
             </div>
           </div>
 
-          {/* Legal */}
+          {/* Legal & Company */}
           <div className="flex flex-col items-center md:items-start gap-4">
             <h4 className="text-sm font-semibold text-white">{t.footer.legal}</h4>
             <div className="flex flex-col items-center md:items-start gap-3 text-sm">
@@ -111,6 +111,15 @@ export function Footer() {
               </a>
               <a href="/legal/terms.html" className="text-slate-400 hover:text-white transition-colors">
                 {t.footer.links.terms}
+              </a>
+              <a href="/legal/trademark.html" className="text-slate-400 hover:text-white transition-colors">
+                Trademark
+              </a>
+              <a href="/invest.html" className="text-slate-400 hover:text-white transition-colors">
+                Investors
+              </a>
+              <a href="/about.html" className="text-slate-400 hover:text-white transition-colors">
+                {t.footer.links.about || 'About'}
               </a>
             </div>
             <div className="flex items-center gap-1 text-sm text-slate-500 mt-4">
@@ -123,6 +132,10 @@ export function Footer() {
 
         {/* Bottom bar */}
         <div className="pt-8 border-t border-slate-800 flex flex-col items-center gap-3 text-xs text-slate-500">
+          {/* Corporate Address */}
+          <p className="text-slate-600 text-center">
+            1021 E Lincolnway Suite #8568, Cheyenne, Wyoming 82001, USA
+          </p>
           <div className="flex flex-col md:flex-row items-center gap-2 md:gap-4">
             <p>{t.footer.copyright}</p>
             <span className="hidden md:inline">·</span>

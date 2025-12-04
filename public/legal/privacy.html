@@ -1,120 +1,216 @@
 <!DOCTYPE html>
-<html lang="pt">
+<html lang="pt-BR">
 <head>
-  <meta charset="utf-8" />
-  <title>Política de Privacidade — ChefIApp™</title>
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Política de Privacidade | ChefIApp™ by Goldmonkey Studio LLC</title>
+  <meta name="description" content="Política de Privacidade do ChefIApp. Como coletamos, usamos e protegemos seus dados." />
+  <meta name="robots" content="index, follow" />
+  <link rel="canonical" href="https://chefiapp.com/legal/privacy.html" />
+  <link rel="alternate" hreflang="pt" href="https://chefiapp.com/legal/privacy.html" />
+  <link rel="alternate" hreflang="en" href="https://chefiapp.com/legal/privacy-en.html" />
+  <link rel="alternate" hreflang="es" href="https://chefiapp.com/legal/privacy-es.html" />
+  <link rel="icon" type="image/png" href="/logo.png" />
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
   <style>
-    * { box-sizing: border-box; margin: 0; padding: 0; }
-    body {
-      font-family: 'Plus Jakarta Sans', system-ui, -apple-system, sans-serif;
-      background: #020617;
-      color: #e2e8f0;
-      line-height: 1.7;
-      padding: 2rem 1rem;
-    }
-    .container {
-      max-width: 800px;
-      margin: 0 auto;
-    }
-    a { color: #f97316; text-decoration: none; }
-    a:hover { text-decoration: underline; }
-    h1 {
-      font-size: 2rem;
-      font-weight: 700;
-      margin-bottom: 0.5rem;
-      background: linear-gradient(90deg, #f97316, #fbbf24);
-      -webkit-background-clip: text;
-      -webkit-text-fill-color: transparent;
-    }
-    h2 {
-      font-size: 1.25rem;
-      font-weight: 600;
-      margin-top: 2rem;
-      margin-bottom: 0.75rem;
-      color: #f8fafc;
-    }
-    p, li { margin-bottom: 0.75rem; color: #94a3b8; }
-    ul { padding-left: 1.5rem; margin-bottom: 1rem; }
-    .updated { font-size: 0.875rem; color: #64748b; margin-bottom: 2rem; }
-    .back { 
-      display: inline-block; 
-      margin-top: 2rem; 
-      padding: 0.75rem 1.5rem; 
-      background: #1e293b; 
-      border-radius: 0.5rem; 
-      color: #f8fafc;
-    }
-    .back:hover { background: #334155; text-decoration: none; }
-    .logo {
-      display: flex;
-      align-items: center;
-      gap: 0.5rem;
-      margin-bottom: 2rem;
-    }
-    .logo img { width: 40px; height: 40px; }
-    .logo span { font-weight: 600; font-size: 1.25rem; color: #f8fafc; }
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+    body { font-family: 'Plus Jakarta Sans', system-ui, sans-serif; background: linear-gradient(180deg, #020617 0%, #0f172a 100%); color: #e2e8f0; line-height: 1.8; min-height: 100vh; }
+    .container { max-width: 800px; margin: 0 auto; padding: 0 1.5rem; }
+    header { padding: 1.5rem 0; border-bottom: 1px solid rgba(255,255,255,0.1); position: sticky; top: 0; background: rgba(2,6,23,0.95); backdrop-filter: blur(20px); z-index: 100; }
+    .header-inner { display: flex; align-items: center; justify-content: space-between; }
+    .logo { display: flex; align-items: center; gap: 0.5rem; text-decoration: none; font-weight: 700; font-size: 1.25rem; color: white; }
+    .logo img { width: 36px; height: 36px; }
+    .logo span { color: #f97316; }
+    nav a { color: #94a3b8; text-decoration: none; font-size: 0.875rem; margin-left: 1rem; }
+    nav a:hover { color: #f97316; }
+    .hero { padding: 4rem 0 2rem; text-align: center; }
+    h1 { font-size: 2.5rem; font-weight: 800; color: white; margin-bottom: 1rem; }
+    .subtitle { font-size: 1rem; color: #94a3b8; }
+    .content { padding: 2rem 0 4rem; }
+    h2 { font-size: 1.5rem; font-weight: 700; color: white; margin: 3rem 0 1rem; padding-bottom: 0.5rem; border-bottom: 2px solid rgba(249,115,22,0.3); }
+    h3 { font-size: 1.125rem; font-weight: 600; color: white; margin: 1.5rem 0 0.75rem; }
+    p { margin-bottom: 1rem; color: #cbd5e1; }
+    ul { margin: 1rem 0 1.5rem 1.5rem; color: #cbd5e1; }
+    li { margin-bottom: 0.5rem; }
+    strong { color: white; }
+    a { color: #f97316; }
+    .highlight { background: rgba(249,115,22,0.1); border: 1px solid rgba(249,115,22,0.3); border-radius: 0.75rem; padding: 1.25rem; margin: 1.5rem 0; }
+    .company-info { background: rgba(59,130,246,0.1); border: 1px solid rgba(59,130,246,0.3); border-radius: 1rem; padding: 1.5rem; margin: 2rem 0; }
+    .lang-selector { display: flex; gap: 0.5rem; }
+    .lang-selector a { padding: 0.25rem 0.5rem; border-radius: 0.25rem; background: rgba(255,255,255,0.1); font-size: 0.75rem; }
+    .lang-selector a.active { background: #f97316; color: white; }
+    footer { padding: 2rem 0; border-top: 1px solid rgba(255,255,255,0.1); text-align: center; color: #64748b; font-size: 0.8rem; }
+    @media (max-width: 640px) { h1 { font-size: 1.75rem; } }
   </style>
 </head>
 <body>
-  <div class="container">
-    <div class="logo">
-      <img src="/logo.png" alt="ChefIApp">
-      <span>ChefI<span style="color: #f97316;">App</span>™</span>
+  <header>
+    <div class="container header-inner">
+      <a href="/" class="logo"><img src="/logo.png" alt="ChefIApp">ChefI<span>App</span>™</a>
+      <nav>
+        <div class="lang-selector">
+          <a href="/legal/privacy.html" class="active">PT</a>
+          <a href="/legal/privacy-en.html">EN</a>
+          <a href="/legal/privacy-es.html">ES</a>
+        </div>
+      </nav>
     </div>
+  </header>
+  
+  <main>
+    <section class="hero">
+      <div class="container">
+        <h1>🔒 Política de Privacidade</h1>
+        <p class="subtitle">Última atualização: Janeiro 2025</p>
+      </div>
+    </section>
     
-    <h1>Política de Privacidade</h1>
-    <p class="updated"><strong>Última atualização:</strong> Dezembro 2025</p>
-
-    <p>
-      O ChefIApp™ é operado pela <strong>Goldmonkey Studio LLC</strong>, uma LLC registrada em Wyoming, EUA,
-      com base operacional em Ibiza, Espanha ("nós", "nosso", "nos").
-    </p>
-
-    <h2>1. Dados que recolhemos</h2>
-    <ul>
-      <li><strong>Dados de conta:</strong> nome, email, idioma, fotografia opcional.</li>
-      <li><strong>Dados de uso:</strong> tarefas concluídas, check-ins, pontos de XP, métricas de desempenho.</li>
-      <li><strong>Dados de localização aproximada:</strong> utilizados apenas para validar check-ins de turno.</li>
-      <li><strong>Identificadores técnicos:</strong> ID do dispositivo, logs técnicos básicos.</li>
-    </ul>
-
-    <h2>2. Como utilizamos os dados</h2>
-    <ul>
-      <li>Para operar o ChefIApp™ e disponibilizar as funcionalidades do serviço.</li>
-      <li>Para criar dashboards, relatórios e métricas internas do restaurante.</li>
-      <li>Para melhorar o produto, de forma agregada e anónima sempre que possível.</li>
-      <li>Para comunicação operacional e suporte.</li>
-    </ul>
-
-    <h2>3. Partilha de dados</h2>
-    <p>Não vendemos dados pessoais. Podemos partilhar dados apenas com:</p>
-    <ul>
-      <li>Prestadores de serviço estritamente necessários (ex.: Supabase, serviços de cloud).</li>
-      <li>Autoridades legais, quando exigido por lei.</li>
-    </ul>
-
-    <h2>4. Retenção e segurança</h2>
-    <p>
-      Retemos dados apenas pelo tempo necessário para operar o serviço ou cumprir obrigações legais.
-      Utilizamos encriptação em trânsito (HTTPS/TLS) e boas práticas de segurança de aplicação.
-    </p>
-
-    <h2>5. Direitos do utilizador</h2>
-    <p>
-      Dependendo da jurisdição, você pode ter direito a aceder, corrigir ou eliminar os seus dados.
-      Para exercer estes direitos, contacte-nos em <a href="mailto:contact@goldmonkey.studio">contact@goldmonkey.studio</a>.
-    </p>
-
-    <h2>6. Contacto</h2>
-    <p>
-      Para dúvidas sobre esta política, contacte:<br>
-      <strong>Goldmonkey Studio LLC</strong><br>
-      <a href="mailto:contact@goldmonkey.studio">contact@goldmonkey.studio</a>
-    </p>
-
-    <a href="/" class="back">← Voltar ao site</a>
-  </div>
+    <section class="content">
+      <div class="container">
+        
+        <div class="company-info">
+          <p style="margin-bottom: 0.5rem;"><strong>Goldmonkey Studio LLC</strong></p>
+          <p style="margin-bottom: 0.5rem; font-size: 0.9rem; color: #94a3b8;">1021 E Lincolnway Suite #8568</p>
+          <p style="margin-bottom: 0.5rem; font-size: 0.9rem; color: #94a3b8;">Cheyenne, Wyoming 82001, USA</p>
+          <p style="margin-bottom: 0; font-size: 0.9rem;">📧 <a href="mailto:privacy@goldmonkey.studio">privacy@goldmonkey.studio</a></p>
+        </div>
+        
+        <p>Esta Política de Privacidade descreve como a <strong>Goldmonkey Studio LLC</strong> ("nós", "nosso" ou "Empresa") coleta, usa e compartilha informações pessoais quando você utiliza o <strong>ChefIApp™</strong> e nossos serviços relacionados.</p>
+        
+        <h2>1. Informações que Coletamos</h2>
+        
+        <h3>1.1 Informações fornecidas por você</h3>
+        <ul>
+          <li><strong>Dados de conta:</strong> Nome, email, telefone, cargo</li>
+          <li><strong>Dados do restaurante:</strong> Nome do estabelecimento, endereço, tipo de negócio</li>
+          <li><strong>Dados de funcionários:</strong> Nome, função, horários (quando cadastrados pelo gestor)</li>
+          <li><strong>Conteúdo gerado:</strong> Tarefas, checklists, avaliações</li>
+        </ul>
+        
+        <h3>1.2 Informações coletadas automaticamente</h3>
+        <ul>
+          <li><strong>Dados de localização:</strong> Coordenadas GPS para check-in (apenas quando autorizado)</li>
+          <li><strong>Dados de uso:</strong> Interações com o app, tempo de uso, funcionalidades utilizadas</li>
+          <li><strong>Dados do dispositivo:</strong> Modelo, sistema operacional, identificadores únicos</li>
+          <li><strong>Logs:</strong> Endereço IP, horário de acesso, páginas visitadas</li>
+        </ul>
+        
+        <h2>2. Como Usamos Suas Informações</h2>
+        
+        <ul>
+          <li>Fornecer e melhorar o ChefIApp™</li>
+          <li>Personalizar sua experiência</li>
+          <li>Processar transações e pagamentos</li>
+          <li>Enviar comunicações sobre o serviço</li>
+          <li>Verificar check-ins via GPS (com consentimento)</li>
+          <li>Gerar estatísticas e análises para gestores</li>
+          <li>Cumprir obrigações legais</li>
+          <li>Prevenir fraudes e abusos</li>
+        </ul>
+        
+        <h2>3. Compartilhamento de Dados</h2>
+        
+        <p>Não vendemos suas informações pessoais. Podemos compartilhar dados com:</p>
+        
+        <ul>
+          <li><strong>Gestores do seu restaurante:</strong> Dados de desempenho e check-in</li>
+          <li><strong>Prestadores de serviço:</strong> Hospedagem (Supabase), analytics, processamento de pagamentos</li>
+          <li><strong>Autoridades legais:</strong> Quando exigido por lei</li>
+          <li><strong>Parceiros:</strong> Apenas com seu consentimento explícito</li>
+        </ul>
+        
+        <h2>4. Check-in GPS e Localização</h2>
+        
+        <div class="highlight">
+          <p style="margin-bottom: 0.5rem;"><strong>⚠️ Importante sobre dados de localização:</strong></p>
+          <ul style="margin-bottom: 0;">
+            <li>Coletamos localização <strong>apenas durante o check-in/check-out</strong></li>
+            <li>Não rastreamos localização em tempo real ou fora do horário de trabalho</li>
+            <li>Você pode desativar GPS nas configurações do dispositivo</li>
+            <li>Dados de localização são usados apenas para validar presença no local de trabalho</li>
+          </ul>
+        </div>
+        
+        <h2>5. Segurança dos Dados</h2>
+        
+        <p>Implementamos medidas de segurança técnicas e organizacionais:</p>
+        <ul>
+          <li>Criptografia de dados em trânsito (TLS/SSL)</li>
+          <li>Criptografia de dados em repouso</li>
+          <li>Controle de acesso baseado em funções</li>
+          <li>Monitoramento de segurança contínuo</li>
+          <li>Backups regulares</li>
+          <li>Infraestrutura em nuvem segura (Supabase)</li>
+        </ul>
+        
+        <h2>6. Seus Direitos (GDPR / LGPD)</h2>
+        
+        <p>Você tem direito a:</p>
+        <ul>
+          <li><strong>Acesso:</strong> Solicitar cópia dos seus dados</li>
+          <li><strong>Retificação:</strong> Corrigir dados incorretos</li>
+          <li><strong>Exclusão:</strong> Solicitar remoção dos dados ("direito ao esquecimento")</li>
+          <li><strong>Portabilidade:</strong> Receber dados em formato estruturado</li>
+          <li><strong>Oposição:</strong> Recusar certos usos dos dados</li>
+          <li><strong>Restrição:</strong> Limitar o processamento</li>
+        </ul>
+        
+        <p>Para exercer seus direitos, contate: <a href="mailto:privacy@goldmonkey.studio">privacy@goldmonkey.studio</a></p>
+        
+        <h2>7. Retenção de Dados</h2>
+        
+        <ul>
+          <li><strong>Dados de conta:</strong> Mantidos enquanto a conta estiver ativa</li>
+          <li><strong>Dados de uso:</strong> 24 meses</li>
+          <li><strong>Logs de segurança:</strong> 12 meses</li>
+          <li><strong>Dados de check-in:</strong> 36 meses (requisito de compliance trabalhista)</li>
+        </ul>
+        
+        <p>Após exclusão da conta, dados são removidos em até 30 dias, exceto quando retenção é exigida por lei.</p>
+        
+        <h2>8. Cookies e Tecnologias Similares</h2>
+        
+        <p>Utilizamos cookies para:</p>
+        <ul>
+          <li>Manter sua sessão ativa</li>
+          <li>Lembrar preferências</li>
+          <li>Analytics e melhoria do serviço</li>
+        </ul>
+        
+        <p>Você pode gerenciar cookies nas configurações do navegador.</p>
+        
+        <h2>9. Menores de Idade</h2>
+        
+        <p>O ChefIApp™ é destinado a usuários maiores de 18 anos. Não coletamos intencionalmente dados de menores.</p>
+        
+        <h2>10. Transferência Internacional</h2>
+        
+        <p>Seus dados podem ser processados nos Estados Unidos e outros países onde nossos servidores estão localizados. Implementamos salvaguardas apropriadas para proteger seus dados em conformidade com GDPR e LGPD.</p>
+        
+        <h2>11. Alterações nesta Política</h2>
+        
+        <p>Podemos atualizar esta política periodicamente. Notificaremos sobre mudanças significativas por email ou através do app.</p>
+        
+        <h2>12. Contato</h2>
+        
+        <div class="company-info">
+          <p><strong>Data Protection Officer</strong></p>
+          <p style="margin-bottom: 0.5rem;">Goldmonkey Studio LLC</p>
+          <p style="margin-bottom: 0.5rem; font-size: 0.9rem; color: #94a3b8;">1021 E Lincolnway Suite #8568<br>Cheyenne, Wyoming 82001, USA</p>
+          <p style="margin-bottom: 0;">📧 <a href="mailto:privacy@goldmonkey.studio">privacy@goldmonkey.studio</a></p>
+        </div>
+        
+      </div>
+    </section>
+  </main>
+  
+  <footer>
+    <div class="container">
+      <p>© 2025 <strong>Goldmonkey Studio LLC</strong> — ChefIApp™</p>
+      <p style="margin-top: 0.5rem;">1021 E Lincolnway Suite #8568, Cheyenne, Wyoming 82001, USA</p>
+      <p style="margin-top: 0.5rem;">🏝️ From Ibiza with Love</p>
+    </div>
+  </footer>
 </body>
 </html>
-

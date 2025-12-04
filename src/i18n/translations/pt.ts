@@ -409,6 +409,8 @@ export const pt = {
       cookies: 'Cookies',
       guide: 'Guia Completo',
       gamification: 'Gamificação',
+      trademark: 'Marca Registrada',
+      invest: 'Investidores',
     },
     copyright: '© 2025 Goldmonkey Studio LLC — ChefIApp™',
     madeWith: 'Feito com',

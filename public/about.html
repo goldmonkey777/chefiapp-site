@@ -1,0 +1,392 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>About Us | ChefIApp™ by Goldmonkey Studio LLC</title>
+  <meta name="description" content="Learn about Goldmonkey Studio LLC, the US-registered company behind ChefIApp™. American technology, European excellence, global vision." />
+  <meta name="robots" content="index, follow" />
+  <link rel="canonical" href="https://chefiapp.com/about.html" />
+  <link rel="icon" type="image/png" href="/logo.png" />
+  
+  <!-- Geo Tags -->
+  <meta name="geo.region" content="US-WY" />
+  <meta name="geo.placename" content="Cheyenne" />
+  <meta name="geo.position" content="41.14;-104.82" />
+  <meta name="ICBM" content="41.14, -104.82" />
+  
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  
+  <style>
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+    :root {
+      --slate-900: #0f172a;
+      --slate-800: #1e293b;
+      --slate-700: #334155;
+      --slate-600: #475569;
+      --slate-500: #64748b;
+      --slate-400: #94a3b8;
+      --slate-300: #cbd5e1;
+      --orange: #f97316;
+      --blue: #3b82f6;
+      --purple: #a855f7;
+    }
+    body { 
+      font-family: 'Plus Jakarta Sans', system-ui, sans-serif; 
+      background: linear-gradient(180deg, #020617 0%, #0f172a 50%, #020617 100%); 
+      color: #e2e8f0; 
+      line-height: 1.8; 
+      min-height: 100vh; 
+    }
+    .container { max-width: 900px; margin: 0 auto; padding: 0 1.5rem; }
+    
+    /* Header */
+    header { 
+      padding: 1.5rem 0; 
+      border-bottom: 1px solid rgba(255,255,255,0.1); 
+      position: sticky; 
+      top: 0; 
+      background: rgba(2,6,23,0.95); 
+      backdrop-filter: blur(20px); 
+      z-index: 100; 
+    }
+    .header-inner { display: flex; align-items: center; justify-content: space-between; max-width: 900px; margin: 0 auto; padding: 0 1.5rem; }
+    .logo { display: flex; align-items: center; gap: 0.5rem; text-decoration: none; font-weight: 700; font-size: 1.25rem; color: white; }
+    .logo img { width: 36px; height: 36px; }
+    .logo span { color: #f97316; }
+    .nav-links { display: flex; gap: 1.5rem; }
+    .nav-links a { color: #94a3b8; text-decoration: none; font-size: 0.875rem; transition: color 0.2s; }
+    .nav-links a:hover { color: #f97316; }
+    
+    /* Hero */
+    .hero { padding: 5rem 0 3rem; text-align: center; }
+    h1 { font-size: 3rem; font-weight: 800; color: white; margin-bottom: 1rem; }
+    h1 span { color: var(--orange); }
+    .subtitle { font-size: 1.25rem; color: var(--slate-400); max-width: 600px; margin: 0 auto; }
+    
+    /* Content */
+    .content { padding: 2rem 0 4rem; }
+    h2 { font-size: 1.75rem; font-weight: 700; color: white; margin: 3rem 0 1.5rem; }
+    h3 { font-size: 1.25rem; font-weight: 600; color: white; margin: 2rem 0 1rem; }
+    p { margin-bottom: 1.25rem; color: var(--slate-300); }
+    ul { margin: 1rem 0 1.5rem 1.5rem; color: var(--slate-300); }
+    li { margin-bottom: 0.5rem; }
+    strong { color: white; }
+    a { color: var(--orange); }
+    
+    /* Cards */
+    .card-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 1.5rem; margin: 2rem 0; }
+    .card { background: rgba(15,23,42,0.6); border: 1px solid var(--slate-800); border-radius: 1.5rem; padding: 2rem; transition: all 0.3s; }
+    .card:hover { border-color: rgba(249,115,22,0.3); }
+    .card-icon { font-size: 2.5rem; margin-bottom: 1rem; }
+    .card h4 { color: white; font-size: 1.125rem; margin-bottom: 0.5rem; }
+    .card p { font-size: 0.95rem; margin-bottom: 0; }
+    
+    /* Company Info Box */
+    .company-box { 
+      background: linear-gradient(135deg, rgba(59,130,246,0.1) 0%, rgba(168,85,247,0.1) 100%); 
+      border: 1px solid rgba(59,130,246,0.3); 
+      border-radius: 1.5rem; 
+      padding: 2.5rem; 
+      margin: 2.5rem 0;
+      text-align: center;
+    }
+    .company-box h3 { margin-top: 0; color: var(--blue); }
+    .company-box .address { font-family: monospace; background: rgba(0,0,0,0.3); padding: 1rem; border-radius: 0.75rem; margin: 1rem 0; font-size: 0.9rem; }
+    
+    /* Timeline */
+    .timeline { margin: 2rem 0; }
+    .timeline-item { display: flex; gap: 1.5rem; margin-bottom: 2rem; }
+    .timeline-date { width: 100px; flex-shrink: 0; font-weight: 600; color: var(--orange); }
+    .timeline-content { flex: 1; background: rgba(15,23,42,0.4); border-left: 3px solid var(--orange); padding: 1rem 1.5rem; border-radius: 0 0.75rem 0.75rem 0; }
+    .timeline-content h4 { color: white; margin-bottom: 0.5rem; }
+    .timeline-content p { margin-bottom: 0; font-size: 0.95rem; }
+    
+    /* Stats */
+    .stats { display: grid; grid-template-columns: repeat(4, 1fr); gap: 1.5rem; margin: 2rem 0; }
+    .stat { text-align: center; padding: 1.5rem; background: rgba(15,23,42,0.4); border-radius: 1rem; }
+    .stat-value { font-size: 2.5rem; font-weight: 800; color: var(--orange); }
+    .stat-label { font-size: 0.875rem; color: var(--slate-400); margin-top: 0.5rem; }
+    
+    /* Values */
+    .values-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 1.5rem; margin: 2rem 0; }
+    .value-item { text-align: center; padding: 1.5rem; }
+    .value-icon { font-size: 2rem; margin-bottom: 0.75rem; }
+    .value-title { color: white; font-weight: 600; margin-bottom: 0.5rem; }
+    .value-text { font-size: 0.9rem; color: var(--slate-400); }
+    
+    /* Founder */
+    .founder-section { background: rgba(249,115,22,0.05); border: 1px solid rgba(249,115,22,0.2); border-radius: 1.5rem; padding: 2.5rem; margin: 2.5rem 0; }
+    .founder-header { display: flex; align-items: center; gap: 1.5rem; margin-bottom: 1.5rem; }
+    .founder-avatar { width: 80px; height: 80px; border-radius: 50%; background: linear-gradient(135deg, var(--orange) 0%, var(--purple) 100%); display: flex; align-items: center; justify-content: center; font-size: 2rem; font-weight: 700; color: white; }
+    .founder-info h3 { margin: 0 0 0.25rem; color: white; }
+    .founder-info p { margin: 0; color: var(--slate-400); font-size: 0.9rem; }
+    
+    /* Footer */
+    footer { padding: 2.5rem 0; border-top: 1px solid rgba(255,255,255,0.1); text-align: center; color: var(--slate-500); font-size: 0.8rem; }
+    footer p { margin-bottom: 0.5rem; }
+    footer a { color: var(--orange); text-decoration: none; }
+    
+    @media (max-width: 768px) { 
+      h1 { font-size: 2rem; }
+      .stats { grid-template-columns: repeat(2, 1fr); }
+      .values-grid { grid-template-columns: 1fr; }
+      .timeline-item { flex-direction: column; gap: 0.5rem; }
+      .timeline-date { width: auto; }
+      .nav-links { display: none; }
+    }
+  </style>
+  
+  <!-- Structured Data -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Organization",
+    "name": "Goldmonkey Studio LLC",
+    "legalName": "Goldmonkey Studio LLC",
+    "url": "https://goldmonkey.studio",
+    "logo": "https://chefiapp.com/logo.png",
+    "description": "US-registered technology company specializing in hospitality software, AI, and automation solutions.",
+    "foundingDate": "2024",
+    "address": {
+      "@type": "PostalAddress",
+      "streetAddress": "1021 E Lincolnway Suite #8568",
+      "addressLocality": "Cheyenne",
+      "addressRegion": "WY",
+      "postalCode": "82001",
+      "addressCountry": "US"
+    },
+    "founder": {
+      "@type": "Person",
+      "name": "Elder Miranda de Andrade"
+    },
+    "sameAs": [
+      "https://instagram.com/chefiapp",
+      "https://youtube.com/@chefiapp",
+      "https://linkedin.com/company/chefiapp"
+    ]
+  }
+  </script>
+</head>
+<body>
+  <header>
+    <div class="header-inner">
+      <a href="/" class="logo"><img src="/logo.png" alt="ChefIApp">ChefI<span>App</span>™</a>
+      <nav class="nav-links">
+        <a href="/">Home</a>
+        <a href="/invest.html">Investors</a>
+        <a href="/legal/terms.html">Legal</a>
+      </nav>
+    </div>
+  </header>
+  
+  <main>
+    <section class="hero">
+      <div class="container">
+        <h1>About <span>Goldmonkey Studio</span></h1>
+        <p class="subtitle">American technology company with European excellence and global vision. Building the future of hospitality management.</p>
+      </div>
+    </section>
+    
+    <section class="content">
+      <div class="container">
+        
+        <!-- Company Box -->
+        <div class="company-box">
+          <h3>🇺🇸 US-Registered Company</h3>
+          <p>
+            <strong>Goldmonkey Studio LLC</strong> is an American technology company officially registered 
+            in the State of Wyoming, United States of America.
+          </p>
+          <div class="address">
+            📍 1021 E Lincolnway Suite #8568<br>
+            Cheyenne, Wyoming 82001, USA
+          </div>
+          <p style="margin-bottom: 0; font-size: 0.9rem; color: var(--slate-400);">
+            Our corporate structure, accounting, and legal framework are American, ensuring 
+            security and compliance for international investors and partners.
+          </p>
+        </div>
+        
+        <h2>Our Mission</h2>
+        <p>
+          We believe every hospitality team deserves access to world-class management tools. 
+          Our mission is to democratize workforce management for restaurants, bars, hotels, and 
+          catering businesses worldwide — making enterprise-grade technology accessible to 
+          independent operators.
+        </p>
+        
+        <div class="card-grid">
+          <div class="card">
+            <div class="card-icon">🎯</div>
+            <h4>Vision</h4>
+            <p>To be the global standard for hospitality team management, loved by employees and managers alike.</p>
+          </div>
+          <div class="card">
+            <div class="card-icon">🔥</div>
+            <h4>Purpose</h4>
+            <p>Empower hospitality teams with gamification, real-time data, and intuitive tools that make work better.</p>
+          </div>
+          <div class="card">
+            <div class="card-icon">🌍</div>
+            <h4>Impact</h4>
+            <p>Reduce turnover, increase engagement, and help hospitality businesses thrive in a competitive market.</p>
+          </div>
+        </div>
+        
+        <h2>Our Story</h2>
+        <p>
+          ChefIApp™ was born in <strong>Ibiza, Spain</strong> — in the heart of one of the world's 
+          most demanding hospitality markets. Our founder, Elder Miranda de Andrade, experienced 
+          firsthand the challenges of managing restaurant teams in a high-turnover, high-pressure 
+          environment.
+        </p>
+        <p>
+          After years of struggling with disconnected tools and unmotivated teams, he decided to 
+          build something different: a platform that puts <strong>people first</strong>, using 
+          gamification, real-time feedback, and GPS validation to create a better work experience 
+          for everyone.
+        </p>
+        <p>
+          The result is ChefIApp™ — tested and refined in real restaurant operations at 
+          <a href="https://sofigastrobar.com" target="_blank">Sofia Gastrobar Ibiza</a>, our 
+          official development laboratory.
+        </p>
+        
+        <!-- Founder Section -->
+        <div class="founder-section">
+          <div class="founder-header">
+            <div class="founder-avatar">EM</div>
+            <div class="founder-info">
+              <h3>Elder Miranda de Andrade</h3>
+              <p>Founder & CEO · Goldmonkey Studio LLC</p>
+            </div>
+          </div>
+          <p>
+            Brazilian-born entrepreneur based in Ibiza, Spain. With over 15 years in the hospitality 
+            industry, Elder combines operational experience with technical expertise to build solutions 
+            that actually work in the real world.
+          </p>
+          <p style="margin-bottom: 0;">
+            <em>"I built ChefIApp because I was tired of tools designed by people who never worked 
+            a Friday night service. This is software made by hospitality, for hospitality."</em>
+          </p>
+        </div>
+        
+        <h2>Timeline</h2>
+        <div class="timeline">
+          <div class="timeline-item">
+            <div class="timeline-date">2024</div>
+            <div class="timeline-content">
+              <h4>Company Founded</h4>
+              <p>Goldmonkey Studio LLC established in Wyoming, USA. Initial development of ChefIApp begins.</p>
+            </div>
+          </div>
+          <div class="timeline-item">
+            <div class="timeline-date">2024</div>
+            <div class="timeline-content">
+              <h4>Sofia Gastrobar Partnership</h4>
+              <p>ChefIApp deployed at Sofia Gastrobar Ibiza as official testing laboratory.</p>
+            </div>
+          </div>
+          <div class="timeline-item">
+            <div class="timeline-date">2025</div>
+            <div class="timeline-content">
+              <h4>Public Launch</h4>
+              <p>ChefIApp.com goes live. Early access program opens for restaurants worldwide.</p>
+            </div>
+          </div>
+          <div class="timeline-item">
+            <div class="timeline-date">2025</div>
+            <div class="timeline-content">
+              <h4>USPTO Trademark Filing</h4>
+              <p>ChefIApp™ and Goldmonkey Studio™ trademarks filed with United States Patent and Trademark Office.</p>
+            </div>
+          </div>
+        </div>
+        
+        <h2>Our Values</h2>
+        <div class="values-grid">
+          <div class="value-item">
+            <div class="value-icon">🧡</div>
+            <div class="value-title">People First</div>
+            <div class="value-text">Technology should serve humans, not the other way around.</div>
+          </div>
+          <div class="value-item">
+            <div class="value-icon">🎮</div>
+            <div class="value-title">Work Should Be Fun</div>
+            <div class="value-text">Gamification isn't a gimmick — it's a proven engagement strategy.</div>
+          </div>
+          <div class="value-item">
+            <div class="value-icon">⚡</div>
+            <div class="value-title">Ship Fast, Learn Faster</div>
+            <div class="value-text">We build in the field, iterate quickly, and never stop improving.</div>
+          </div>
+          <div class="value-item">
+            <div class="value-icon">🌎</div>
+            <div class="value-title">Global Mindset</div>
+            <div class="value-text">Built for the world — available in Portuguese, English, and Spanish.</div>
+          </div>
+          <div class="value-item">
+            <div class="value-icon">🔒</div>
+            <div class="value-title">Trust & Transparency</div>
+            <div class="value-text">US-registered, USPTO-protected, GDPR-compliant. No shortcuts.</div>
+          </div>
+          <div class="value-item">
+            <div class="value-icon">🏝️</div>
+            <div class="value-title">From Ibiza with Love</div>
+            <div class="value-text">Designed in paradise, tested in real restaurants, ready for the world.</div>
+          </div>
+        </div>
+        
+        <h2>Legal & Compliance</h2>
+        <p>
+          Goldmonkey Studio LLC is committed to operating with full legal compliance and transparency.
+        </p>
+        <ul>
+          <li><strong>US-Registered Company:</strong> Wyoming LLC in good standing</li>
+          <li><strong>Trademark Protection:</strong> ChefIApp™ pending at USPTO</li>
+          <li><strong>Privacy Compliance:</strong> GDPR, LGPD, and CCPA ready</li>
+          <li><strong>Data Security:</strong> Encrypted storage, secure infrastructure (Supabase)</li>
+          <li><strong>International Structure:</strong> Ready for global investment and partnerships</li>
+        </ul>
+        <p>
+          For legal inquiries: <a href="mailto:legal@goldmonkey.studio">legal@goldmonkey.studio</a>
+        </p>
+        
+        <h2>Contact Us</h2>
+        <div class="card-grid">
+          <div class="card">
+            <div class="card-icon">📧</div>
+            <h4>General Inquiries</h4>
+            <p><a href="mailto:contact@goldmonkey.studio">contact@goldmonkey.studio</a></p>
+          </div>
+          <div class="card">
+            <div class="card-icon">💼</div>
+            <h4>Investors</h4>
+            <p><a href="mailto:invest@goldmonkey.studio">invest@goldmonkey.studio</a></p>
+          </div>
+          <div class="card">
+            <div class="card-icon">⚖️</div>
+            <h4>Legal</h4>
+            <p><a href="mailto:legal@goldmonkey.studio">legal@goldmonkey.studio</a></p>
+          </div>
+        </div>
+        
+      </div>
+    </section>
+  </main>
+  
+  <footer>
+    <div class="container">
+      <p>© 2025 <strong>Goldmonkey Studio LLC</strong> — ChefIApp™</p>
+      <p>1021 E Lincolnway Suite #8568, Cheyenne, Wyoming 82001, USA</p>
+      <p>Registered in Wyoming · Trademark pending at USPTO</p>
+      <p style="margin-top: 1rem;">🏝️ From Ibiza with Love</p>
+    </div>
+  </footer>
+</body>
+</html>
+
+

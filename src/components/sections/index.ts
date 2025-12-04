@@ -11,4 +11,7 @@ export { FAQ } from './FAQ'
 export { EarlyAccess } from './EarlyAccess'
 export { Download } from './Download'
 export { Founder } from './Founder'
+export { Comparison } from './Comparison'
+export { ROICalculator } from './ROICalculator'
+export { VideoDemo } from './VideoDemo'
 

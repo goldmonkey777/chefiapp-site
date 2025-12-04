@@ -21,10 +21,14 @@
     <meta name="apple-mobile-web-app-capable" content="yes" />
     <meta name="mobile-web-app-capable" content="yes" />
     <meta name="format-detection" content="telephone=no" />
-    <meta name="geo.region" content="ES-IB" />
-    <meta name="geo.placename" content="Ibiza" />
-    <meta name="geo.position" content="38.9067;1.4206" />
-    <meta name="ICBM" content="38.9067, 1.4206" />
+    <!-- Corporate HQ Location (Wyoming, USA) -->
+    <meta name="geo.region" content="US-WY" />
+    <meta name="geo.placename" content="Cheyenne" />
+    <meta name="geo.position" content="41.14;-104.82" />
+    <meta name="ICBM" content="41.14, -104.82" />
+    <!-- Operational Base (Ibiza, Spain) -->
+    <meta name="geo.region:operational" content="ES-IB" />
+    <meta name="geo.placename:operational" content="Ibiza" />
 
     <!-- Social Media Profile Links -->
     <link rel="me" href="https://instagram.com/chefiapp" />
@@ -59,24 +63,70 @@
     <meta name="theme-color" content="#F97316" />
     <meta name="msapplication-TileColor" content="#0F172A" />
     
-    <!-- Structured Data -->
+    <!-- Structured Data - Organization -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "Organization",
+      "name": "Goldmonkey Studio LLC",
+      "legalName": "Goldmonkey Studio LLC",
+      "url": "https://goldmonkey.studio",
+      "logo": "https://chefiapp.com/logo.png",
+      "address": {
+        "@type": "PostalAddress",
+        "streetAddress": "1021 E Lincolnway Suite #8568",
+        "addressLocality": "Cheyenne",
+        "addressRegion": "WY",
+        "postalCode": "82001",
+        "addressCountry": "US"
+      },
+      "sameAs": [
+        "https://instagram.com/chefiapp",
+        "https://youtube.com/@chefiapp",
+        "https://linkedin.com/company/chefiapp",
+        "https://tiktok.com/@chefiapp"
+      ],
+      "contactPoint": {
+        "@type": "ContactPoint",
+        "email": "contact@goldmonkey.studio",
+        "contactType": "customer service"
+      }
+    }
+    </script>
+    
+    <!-- Structured Data - Software Application -->
     <script type="application/ld+json">
     {
       "@context": "https://schema.org",
       "@type": "SoftwareApplication",
       "name": "ChefIApp",
       "applicationCategory": "BusinessApplication",
+      "applicationSubCategory": "Hospitality workforce management",
       "operatingSystem": "iOS, Android, Web",
-      "description": "Smart staff management platform for restaurants, bars, hotels and hospitality teams",
+      "description": "Smart staff management platform for restaurants, bars, hotels and hospitality teams. Alternative to 7shifts, Harri, Fourth.",
       "offers": {
         "@type": "Offer",
         "price": "0",
-        "priceCurrency": "USD"
+        "priceCurrency": "EUR",
+        "availability": "https://schema.org/InStock"
       },
       "author": {
         "@type": "Organization",
         "name": "Goldmonkey Studio LLC",
-        "url": "https://goldmonkey.studio"
+        "url": "https://goldmonkey.studio",
+        "address": {
+          "@type": "PostalAddress",
+          "streetAddress": "1021 E Lincolnway Suite #8568",
+          "addressLocality": "Cheyenne",
+          "addressRegion": "WY",
+          "postalCode": "82001",
+          "addressCountry": "US"
+        }
+      },
+      "aggregateRating": {
+        "@type": "AggregateRating",
+        "ratingValue": "4.9",
+        "ratingCount": "200"
       }
     }
     </script>
