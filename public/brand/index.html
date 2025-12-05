@@ -1,0 +1,413 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>ChefIApp™ - Brand Assets</title>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+      background: #f8fafc;
+      color: #0f172a;
+      padding: 2rem;
+    }
+
+    .container {
+      max-width: 1200px;
+      margin: 0 auto;
+    }
+
+    h1 {
+      font-size: 2.5rem;
+      margin-bottom: 0.5rem;
+      color: #0f172a;
+    }
+
+    .subtitle {
+      color: #64748b;
+      margin-bottom: 3rem;
+      font-size: 1.1rem;
+    }
+
+    .grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+      gap: 2rem;
+      margin-bottom: 3rem;
+    }
+
+    .card {
+      background: white;
+      border: 1px solid #e2e8f0;
+      border-radius: 1rem;
+      padding: 2rem;
+      box-shadow: 0 1px 3px rgba(0,0,0,0.1);
+    }
+
+    .card h2 {
+      font-size: 1.25rem;
+      margin-bottom: 1rem;
+      color: #f97316;
+    }
+
+    .logo-preview {
+      background: #f8fafc;
+      border: 2px dashed #cbd5e1;
+      border-radius: 0.75rem;
+      padding: 2rem;
+      text-align: center;
+      margin-bottom: 1rem;
+      min-height: 120px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+
+    .logo-preview-dark {
+      background: #0f172a;
+      border-color: #334155;
+    }
+
+    .logo-preview img {
+      max-width: 100%;
+      height: auto;
+    }
+
+    .download-btn {
+      display: inline-block;
+      background: #10b981;
+      color: white;
+      padding: 0.75rem 1.5rem;
+      border-radius: 0.5rem;
+      text-decoration: none;
+      font-weight: 600;
+      font-size: 0.9rem;
+      transition: all 0.2s;
+      margin-top: 1rem;
+    }
+
+    .download-btn:hover {
+      background: #059669;
+      transform: translateY(-2px);
+    }
+
+    .usage-note {
+      background: #fef3c7;
+      border-left: 4px solid #f59e0b;
+      padding: 1rem;
+      margin-top: 1rem;
+      border-radius: 0.5rem;
+      font-size: 0.9rem;
+      color: #78350f;
+    }
+
+    .specs {
+      margin-top: 1.5rem;
+      padding-top: 1.5rem;
+      border-top: 1px solid #e2e8f0;
+    }
+
+    .specs h3 {
+      font-size: 0.9rem;
+      color: #64748b;
+      margin-bottom: 0.75rem;
+      text-transform: uppercase;
+      letter-spacing: 0.05em;
+    }
+
+    .specs ul {
+      list-style: none;
+      font-size: 0.85rem;
+      color: #475569;
+    }
+
+    .specs li {
+      margin-bottom: 0.5rem;
+      padding-left: 1.5rem;
+      position: relative;
+    }
+
+    .specs li:before {
+      content: "•";
+      position: absolute;
+      left: 0;
+      color: #10b981;
+      font-weight: bold;
+      font-size: 1.2em;
+    }
+
+    .color-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 1rem;
+      margin-top: 1rem;
+    }
+
+    .color-box {
+      aspect-ratio: 1;
+      border-radius: 0.5rem;
+      display: flex;
+      align-items: flex-end;
+      padding: 0.75rem;
+      color: white;
+      font-size: 0.75rem;
+      font-weight: 600;
+      text-shadow: 0 1px 2px rgba(0,0,0,0.3);
+    }
+
+    .footer {
+      text-align: center;
+      margin-top: 4rem;
+      padding-top: 2rem;
+      border-top: 1px solid #e2e8f0;
+      color: #64748b;
+    }
+
+    @media (max-width: 768px) {
+      .grid {
+        grid-template-columns: 1fr;
+      }
+
+      .color-grid {
+        grid-template-columns: repeat(2, 1fr);
+      }
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <h1>ChefIApp™ Brand Assets</h1>
+    <p class="subtitle">Variação Corporate Focus - Logos oficiais em SVG</p>
+
+    <div class="grid">
+      <!-- Primary Logo -->
+      <div class="card">
+        <h2>Logo Principal (Light)</h2>
+        <div class="logo-preview">
+          <img src="logo-corporate.svg" alt="ChefIApp Logo">
+        </div>
+        <a href="logo-corporate.svg" download class="download-btn">⬇️ Download SVG</a>
+
+        <div class="usage-note">
+          <strong>Uso:</strong> Backgrounds claros, documentos oficiais, website (light mode)
+        </div>
+
+        <div class="specs">
+          <h3>Especificações</h3>
+          <ul>
+            <li>Formato: SVG (escalável)</li>
+            <li>Tamanho: 300x100px (proporcional)</li>
+            <li>Fonte: System UI, Sans-serif</li>
+            <li>Cor texto: #0f172a (Slate 900)</li>
+            <li>Badge IA: #10b981 (Green 500)</li>
+          </ul>
+        </div>
+      </div>
+
+      <!-- Dark Logo -->
+      <div class="card">
+        <h2>Logo Principal (Dark)</h2>
+        <div class="logo-preview logo-preview-dark">
+          <img src="logo-corporate-dark.svg" alt="ChefIApp Logo Dark">
+        </div>
+        <a href="logo-corporate-dark.svg" download class="download-btn">⬇️ Download SVG</a>
+
+        <div class="usage-note">
+          <strong>Uso:</strong> Backgrounds escuros, apresentações, website (dark mode)
+        </div>
+
+        <div class="specs">
+          <h3>Especificações</h3>
+          <ul>
+            <li>Formato: SVG (escalável)</li>
+            <li>Tamanho: 300x100px (proporcional)</li>
+            <li>Cor texto: #e2e8f0 (Slate 200)</li>
+            <li>Badge IA: #10b981 (Green 500)</li>
+            <li>Contraste: AAA rated</li>
+          </ul>
+        </div>
+      </div>
+
+      <!-- Horizontal Logo -->
+      <div class="card">
+        <h2>Logo Horizontal + Tagline</h2>
+        <div class="logo-preview">
+          <img src="logo-corporate-horizontal.svg" alt="ChefIApp Horizontal Logo">
+        </div>
+        <a href="logo-corporate-horizontal.svg" download class="download-btn">⬇️ Download SVG</a>
+
+        <div class="usage-note">
+          <strong>Uso:</strong> Headers, assinaturas de email, documentos corporativos
+        </div>
+
+        <div class="specs">
+          <h3>Especificações</h3>
+          <ul>
+            <li>Formato: SVG (escalável)</li>
+            <li>Tamanho: 400x60px</li>
+            <li>Inclui tagline: "Hospitality Intelligence Platform"</li>
+            <li>Layout: Horizontal (wide)</li>
+          </ul>
+        </div>
+      </div>
+
+      <!-- Icon Logo -->
+      <div class="card">
+        <h2>Ícone / App Icon</h2>
+        <div class="logo-preview">
+          <img src="logo-icon.svg" alt="ChefIApp Icon" style="width: 80px;">
+        </div>
+        <a href="logo-icon.svg" download class="download-btn">⬇️ Download SVG</a>
+
+        <div class="usage-note">
+          <strong>Uso:</strong> Favicon, app icon (iOS/Android), social media profile
+        </div>
+
+        <div class="specs">
+          <h3>Especificações</h3>
+          <ul>
+            <li>Formato: SVG (80x80px)</li>
+            <li>Background: #0f172a (Slate 900)</li>
+            <li>Chef hat: #f97316 (Orange 500)</li>
+            <li>Badge IA: #10b981 (Green 500)</li>
+            <li>Border radius: 20% (16px/80px)</li>
+          </ul>
+        </div>
+      </div>
+
+      <!-- Wordmark -->
+      <div class="card">
+        <h2>Wordmark (Texto Only)</h2>
+        <div class="logo-preview">
+          <img src="logo-wordmark.svg" alt="ChefIApp Wordmark">
+        </div>
+        <a href="logo-wordmark.svg" download class="download-btn">⬇️ Download SVG</a>
+
+        <div class="usage-note">
+          <strong>Uso:</strong> Espaços reduzidos, rodapés, assinaturas simples
+        </div>
+
+        <div class="specs">
+          <h3>Especificações</h3>
+          <ul>
+            <li>Formato: SVG (200x50px)</li>
+            <li>Sem badge IA (versão simplificada)</li>
+            <li>Trademark ™ destacado em laranja</li>
+            <li>Mínimo recomendado: 100px width</li>
+          </ul>
+        </div>
+      </div>
+
+      <!-- Color Palette -->
+      <div class="card" style="grid-column: 1 / -1;">
+        <h2>Paleta de Cores Oficial</h2>
+        <div class="color-grid">
+          <div class="color-box" style="background: #f97316;">
+            Laranja<br>#f97316
+          </div>
+          <div class="color-box" style="background: #10b981;">
+            Verde IA<br>#10b981
+          </div>
+          <div class="color-box" style="background: #3b82f6;">
+            Azul Tech<br>#3b82f6
+          </div>
+          <div class="color-box" style="background: #0f172a;">
+            Slate Dark<br>#0f172a
+          </div>
+          <div class="color-box" style="background: #cbd5e1; color: #0f172a; text-shadow: none;">
+            Slate Light<br>#cbd5e1
+          </div>
+          <div class="color-box" style="background: #64748b;">
+            Slate Gray<br>#64748b
+          </div>
+        </div>
+
+        <div class="specs">
+          <h3>Aplicação de Cores</h3>
+          <ul>
+            <li><strong>Laranja (#f97316):</strong> CTAs, destaques, elementos de marca</li>
+            <li><strong>Verde IA (#10b981):</strong> Badge I.A., elementos tech, sucesso</li>
+            <li><strong>Azul Tech (#3b82f6):</strong> Links, dados, dashboards</li>
+            <li><strong>Slate Dark (#0f172a):</strong> Texto principal, backgrounds dark</li>
+            <li><strong>Slate Light (#cbd5e1):</strong> Texto em dark mode, borders</li>
+            <li><strong>Slate Gray (#64748b):</strong> Texto secundário, placeholders</li>
+          </ul>
+        </div>
+      </div>
+
+      <!-- Usage Guidelines -->
+      <div class="card" style="grid-column: 1 / -1;">
+        <h2>📋 Diretrizes de Uso</h2>
+
+        <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 2rem; margin-top: 1.5rem;">
+          <div>
+            <h3 style="color: #10b981; margin-bottom: 1rem; font-size: 1rem;">✅ Fazer</h3>
+            <ul style="list-style: none; font-size: 0.9rem; color: #475569;">
+              <li style="margin-bottom: 0.75rem; padding-left: 1.5rem; position: relative;">
+                <span style="position: absolute; left: 0; color: #10b981; font-weight: bold;">✓</span>
+                Usar logo oficial em materiais corporativos
+              </li>
+              <li style="margin-bottom: 0.75rem; padding-left: 1.5rem; position: relative;">
+                <span style="position: absolute; left: 0; color: #10b981; font-weight: bold;">✓</span>
+                Manter proporções originais (não distorcer)
+              </li>
+              <li style="margin-bottom: 0.75rem; padding-left: 1.5rem; position: relative;">
+                <span style="position: absolute; left: 0; color: #10b981; font-weight: bold;">✓</span>
+                Usar versão dark em backgrounds escuros
+              </li>
+              <li style="margin-bottom: 0.75rem; padding-left: 1.5rem; position: relative;">
+                <span style="position: absolute; left: 0; color: #10b981; font-weight: bold;">✓</span>
+                Respeitar área de respiro mínima (20px)
+              </li>
+              <li style="margin-bottom: 0.75rem; padding-left: 1.5rem; position: relative;">
+                <span style="position: absolute; left: 0; color: #10b981; font-weight: bold;">✓</span>
+                Usar SVG sempre que possível (escalabilidade)
+              </li>
+            </ul>
+          </div>
+
+          <div>
+            <h3 style="color: #ef4444; margin-bottom: 1rem; font-size: 1rem;">❌ Não Fazer</h3>
+            <ul style="list-style: none; font-size: 0.9rem; color: #475569;">
+              <li style="margin-bottom: 0.75rem; padding-left: 1.5rem; position: relative;">
+                <span style="position: absolute; left: 0; color: #ef4444; font-weight: bold;">✗</span>
+                Alterar cores da logo (manter fidelidade)
+              </li>
+              <li style="margin-bottom: 0.75rem; padding-left: 1.5rem; position: relative;">
+                <span style="position: absolute; left: 0; color: #ef4444; font-weight: bold;">✗</span>
+                Distorcer proporções (esticar/comprimir)
+              </li>
+              <li style="margin-bottom: 0.75rem; padding-left: 1.5rem; position: relative;">
+                <span style="position: absolute; left: 0; color: #ef4444; font-weight: bold;">✗</span>
+                Adicionar efeitos (sombras, gradientes)
+              </li>
+              <li style="margin-bottom: 0.75rem; padding-left: 1.5rem; position: relative;">
+                <span style="position: absolute; left: 0; color: #ef4444; font-weight: bold;">✗</span>
+                Usar logo pixelizada (sempre SVG/alta res)
+              </li>
+              <li style="margin-bottom: 0.75rem; padding-left: 1.5rem; position: relative;">
+                <span style="position: absolute; left: 0; color: #ef4444; font-weight: bold;">✗</span>
+                Remover badge I.A. da versão corporate
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="footer">
+      <p style="margin-bottom: 0.5rem; font-weight: 600;">From Ibiza with Love — by goldmonkey.studio 🚀</p>
+      <p style="font-size: 0.9rem;">ChefIApp™ Brand Assets v1.0 | 2025-12-05</p>
+      <p style="font-size: 0.85rem; margin-top: 1rem; color: #94a3b8;">
+        © 2025 Goldmonkey Studio LLC. All rights reserved. ChefIApp™ is a registered trademark.
+      </p>
+    </div>
+  </div>
+</body>
+</html>

@@ -1,0 +1,445 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>ChefIApp™ - Logo Variations</title>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+      background: linear-gradient(135deg, #0f172a 0%, #1e293b 100%);
+      color: #cbd5e1;
+      padding: 3rem;
+      min-height: 100vh;
+    }
+
+    .container {
+      max-width: 1400px;
+      margin: 0 auto;
+    }
+
+    h1 {
+      text-align: center;
+      color: #f97316;
+      font-size: 2.5rem;
+      margin-bottom: 1rem;
+    }
+
+    .subtitle {
+      text-align: center;
+      color: #94a3b8;
+      margin-bottom: 3rem;
+      font-size: 1.1rem;
+    }
+
+    .grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
+      gap: 2rem;
+      margin-bottom: 3rem;
+    }
+
+    .card {
+      background: rgba(30, 41, 59, 0.6);
+      border: 1px solid rgba(148, 163, 184, 0.2);
+      border-radius: 1rem;
+      padding: 2rem;
+      transition: all 0.3s ease;
+    }
+
+    .card:hover {
+      border-color: #f97316;
+      box-shadow: 0 0 30px rgba(249, 115, 22, 0.3);
+      transform: translateY(-5px);
+    }
+
+    .card-title {
+      font-size: 1.5rem;
+      margin-bottom: 0.5rem;
+      color: #f97316;
+    }
+
+    .card-description {
+      color: #94a3b8;
+      margin-bottom: 2rem;
+      font-size: 0.95rem;
+    }
+
+    .logo-display {
+      background: white;
+      padding: 3rem;
+      border-radius: 0.75rem;
+      margin-bottom: 1.5rem;
+      text-align: center;
+      min-height: 150px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+
+    .logo-dark {
+      background: #0f172a;
+      border: 1px solid #334155;
+    }
+
+    /* Variation 1: Tech Focus */
+    .logo-tech {
+      font-size: 3rem;
+      font-weight: 700;
+      letter-spacing: -0.02em;
+    }
+
+    .logo-tech .chef {
+      color: #0f172a;
+    }
+
+    .logo-tech .ia {
+      color: #10b981;
+      font-weight: 900;
+    }
+
+    .logo-tech .app {
+      color: #0f172a;
+    }
+
+    .logo-tech .tm {
+      color: #f97316;
+      font-size: 0.5em;
+      vertical-align: super;
+    }
+
+    .logo-tech-dark .chef,
+    .logo-tech-dark .app {
+      color: #e2e8f0;
+    }
+
+    /* Variation 2: Corporate */
+    .logo-corporate {
+      font-size: 2.5rem;
+      font-weight: 600;
+      position: relative;
+    }
+
+    .logo-corporate .main {
+      color: #0f172a;
+    }
+
+    .logo-corporate-dark .main {
+      color: #e2e8f0;
+    }
+
+    .logo-corporate .ai-badge {
+      position: absolute;
+      bottom: -25px;
+      left: 50%;
+      transform: translateX(-50%);
+      background: #10b981;
+      color: white;
+      padding: 0.25rem 0.75rem;
+      border-radius: 1rem;
+      font-size: 0.75rem;
+      font-weight: 700;
+      letter-spacing: 0.05em;
+    }
+
+    /* Variation 3: Hybrid */
+    .logo-hybrid {
+      font-size: 3rem;
+      font-weight: 700;
+      display: flex;
+      align-items: center;
+      gap: 0.25rem;
+    }
+
+    .logo-hybrid .text {
+      color: #0f172a;
+    }
+
+    .logo-hybrid-dark .text {
+      color: #e2e8f0;
+    }
+
+    .logo-hybrid .divider {
+      color: #10b981;
+      font-weight: 300;
+      font-size: 1.2em;
+    }
+
+    .logo-hybrid .i-letter,
+    .logo-hybrid .a-letter {
+      color: #10b981;
+      position: relative;
+    }
+
+    .logo-hybrid .tm {
+      color: #f97316;
+      font-size: 0.5em;
+      vertical-align: super;
+    }
+
+    .tagline {
+      text-align: center;
+      color: #64748b;
+      font-size: 0.9rem;
+      margin-top: 1rem;
+      font-style: italic;
+    }
+
+    .specs {
+      background: rgba(15, 23, 42, 0.5);
+      border-radius: 0.5rem;
+      padding: 1rem;
+      margin-top: 1rem;
+    }
+
+    .specs h4 {
+      color: #f97316;
+      margin-bottom: 0.75rem;
+      font-size: 0.9rem;
+    }
+
+    .specs ul {
+      list-style: none;
+      font-size: 0.85rem;
+      color: #94a3b8;
+    }
+
+    .specs li {
+      margin-bottom: 0.4rem;
+      padding-left: 1.5rem;
+      position: relative;
+    }
+
+    .specs li:before {
+      content: "✓";
+      position: absolute;
+      left: 0;
+      color: #10b981;
+      font-weight: bold;
+    }
+
+    .color-palette {
+      display: flex;
+      gap: 1rem;
+      margin-top: 2rem;
+      flex-wrap: wrap;
+    }
+
+    .color-sample {
+      flex: 1;
+      min-width: 100px;
+      text-align: center;
+    }
+
+    .color-box {
+      height: 80px;
+      border-radius: 0.5rem;
+      margin-bottom: 0.5rem;
+      border: 2px solid rgba(148, 163, 184, 0.2);
+    }
+
+    .color-name {
+      font-size: 0.75rem;
+      color: #cbd5e1;
+      margin-bottom: 0.25rem;
+    }
+
+    .color-code {
+      font-size: 0.7rem;
+      color: #64748b;
+      font-family: 'Courier New', monospace;
+    }
+
+    @media (max-width: 768px) {
+      .grid {
+        grid-template-columns: 1fr;
+      }
+
+      .logo-tech,
+      .logo-corporate,
+      .logo-hybrid {
+        font-size: 2rem;
+      }
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <h1>ChefIApp™ Logo Variations</h1>
+    <p class="subtitle">3 opções estratégicas com foco em Inteligência Artificial</p>
+
+    <div class="grid">
+      <!-- Variation 1: Tech Focus -->
+      <div class="card">
+        <h3 class="card-title">Variação 1: Tech Focus</h3>
+        <p class="card-description">Destaque máximo para IA - ideal para comunicação tech-forward</p>
+
+        <div class="logo-display">
+          <div class="logo-tech">
+            <span class="chef">Chef</span><span class="ia">IA</span><span class="app">pp</span><span class="tm">™</span>
+          </div>
+        </div>
+        <div class="tagline">Powered by Intelligence & Automation</div>
+
+        <div class="logo-display logo-dark">
+          <div class="logo-tech logo-tech-dark">
+            <span class="chef">Chef</span><span class="ia">IA</span><span class="app">pp</span><span class="tm">™</span>
+          </div>
+        </div>
+        <div class="tagline">Dark mode version</div>
+
+        <div class="specs">
+          <h4>Especificações:</h4>
+          <ul>
+            <li>IA em verde neon (#10b981) bold 900</li>
+            <li>Chef/pp em slate escuro/claro</li>
+            <li>™ em laranja (#f97316)</li>
+            <li>Fonte sugerida: Inter, Satoshi, ou SF Pro</li>
+            <li>Uso: Landing page, pitch deck tech</li>
+          </ul>
+        </div>
+      </div>
+
+      <!-- Variation 2: Corporate -->
+      <div class="card">
+        <h3 class="card-title">Variação 2: Corporate Focus</h3>
+        <p class="card-description">Profissional e sóbrio - ideal para contratos enterprise</p>
+
+        <div class="logo-display">
+          <div class="logo-corporate">
+            <span class="main">ChefIApp™</span>
+            <div class="ai-badge">I.A.</div>
+          </div>
+        </div>
+        <div class="tagline" style="margin-top: 2rem;">Hospitality Intelligence Platform</div>
+
+        <div class="logo-display logo-dark">
+          <div class="logo-corporate logo-corporate-dark">
+            <span class="main">ChefIApp™</span>
+            <div class="ai-badge">I.A.</div>
+          </div>
+        </div>
+        <div class="tagline" style="margin-top: 2rem;">Dark mode version</div>
+
+        <div class="specs">
+          <h4>Especificações:</h4>
+          <ul>
+            <li>Logo limpo e profissional</li>
+            <li>Badge "I.A." destacado abaixo</li>
+            <li>Verde corporativo (#10b981)</li>
+            <li>Fonte sugerida: Helvetica, Arial, Roboto</li>
+            <li>Uso: Contratos, documentos oficiais</li>
+          </ul>
+        </div>
+      </div>
+
+      <!-- Variation 3: Hybrid -->
+      <div class="card">
+        <h3 class="card-title">Variação 3: Hybrid</h3>
+        <p class="card-description">Equilíbrio entre tech e corporativo - uso universal</p>
+
+        <div class="logo-display">
+          <div class="logo-hybrid">
+            <span class="text">Chef</span>
+            <span class="divider">│</span>
+            <span class="i-letter">I</span>
+            <span class="divider">│</span>
+            <span class="text">App</span>
+            <span class="tm">™</span>
+          </div>
+        </div>
+        <div class="tagline">Smart Management for Hospitality</div>
+
+        <div class="logo-display logo-dark">
+          <div class="logo-hybrid logo-hybrid-dark">
+            <span class="text">Chef</span>
+            <span class="divider">│</span>
+            <span class="i-letter">I</span>
+            <span class="divider">│</span>
+            <span class="text">App</span>
+            <span class="tm">™</span>
+          </div>
+        </div>
+        <div class="tagline">Dark mode version</div>
+
+        <div class="specs">
+          <h4>Especificações:</h4>
+          <ul>
+            <li>Separadores verticais em verde</li>
+            <li>I destacado entre divisórias</li>
+            <li>Visual limpo e moderno</li>
+            <li>Fonte sugerida: Inter, Poppins</li>
+            <li>Uso: Website, apps, marketing geral</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+
+    <!-- Color Palette -->
+    <div class="card" style="grid-column: 1 / -1;">
+      <h3 class="card-title">Paleta de Cores Oficial</h3>
+      <p class="card-description">Cores estratégicas alinhadas ao posicionamento corporativo + tech</p>
+
+      <div class="color-palette">
+        <div class="color-sample">
+          <div class="color-box" style="background: #f97316;"></div>
+          <div class="color-name">Laranja Corporativo</div>
+          <div class="color-code">#f97316</div>
+        </div>
+
+        <div class="color-sample">
+          <div class="color-box" style="background: #10b981;"></div>
+          <div class="color-name">Verde IA</div>
+          <div class="color-code">#10b981</div>
+        </div>
+
+        <div class="color-sample">
+          <div class="color-box" style="background: #3b82f6;"></div>
+          <div class="color-name">Azul Tech</div>
+          <div class="color-code">#3b82f6</div>
+        </div>
+
+        <div class="color-sample">
+          <div class="color-box" style="background: #0f172a;"></div>
+          <div class="color-name">Slate Dark</div>
+          <div class="color-code">#0f172a</div>
+        </div>
+
+        <div class="color-sample">
+          <div class="color-box" style="background: #cbd5e1;"></div>
+          <div class="color-name">Slate Light</div>
+          <div class="color-code">#cbd5e1</div>
+        </div>
+
+        <div class="color-sample">
+          <div class="color-box" style="background: #06b6d4;"></div>
+          <div class="color-name">Cyan Alternativo</div>
+          <div class="color-code">#06b6d4</div>
+        </div>
+      </div>
+
+      <div style="margin-top: 2rem; padding-top: 2rem; border-top: 1px solid rgba(148, 163, 184, 0.2);">
+        <h4 style="color: #f97316; margin-bottom: 1rem;">Aplicação Recomendada:</h4>
+        <ul style="list-style: none; color: #94a3b8; font-size: 0.9rem;">
+          <li style="margin-bottom: 0.5rem;">🎯 <strong>Primária:</strong> Laranja (#f97316) para CTAs, destaques, brand</li>
+          <li style="margin-bottom: 0.5rem;">🤖 <strong>IA/Tech:</strong> Verde (#10b981) para elementos de inteligência</li>
+          <li style="margin-bottom: 0.5rem;">💼 <strong>Corporativo:</strong> Azul (#3b82f6) para dashboards, dados</li>
+          <li style="margin-bottom: 0.5rem;">🎨 <strong>Background:</strong> Slate Dark (#0f172a) para dark mode</li>
+          <li style="margin-bottom: 0.5rem;">📄 <strong>Texto:</strong> Slate Light (#cbd5e1) para legibilidade</li>
+        </ul>
+      </div>
+    </div>
+
+    <div style="text-align: center; margin-top: 3rem; padding-top: 2rem; border-top: 1px solid rgba(148, 163, 184, 0.2); color: #64748b;">
+      <p style="margin-bottom: 0.5rem;">From Ibiza with Love — by goldmonkey.studio 🚀</p>
+      <p style="font-size: 0.85rem;">ChefIApp™ Brand Identity v1.0 | 2025-12-05</p>
+    </div>
+  </div>
+</body>
+</html>

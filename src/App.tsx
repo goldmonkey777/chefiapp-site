@@ -4,6 +4,10 @@ import { Footer } from './components/layout/Footer'
 import { Hero } from './components/sections/Hero'
 import { StructuredData } from './components/seo/StructuredData'
 import { Analytics } from './components/analytics/Analytics'
+import { LiveChat } from './components/chat/LiveChat'
+import { ProductTour } from './components/tour/ProductTour'
+import { AppDeepLinking } from './components/mobile/AppDeepLinking'
+import { useAdvancedAnalytics } from './hooks/useAdvancedAnalytics'
 
 // Lazy load below-the-fold components for better performance
 const ForWho = lazy(() => import('./components/sections/ForWho').then(m => ({ default: m.ForWho })))
@@ -30,11 +34,17 @@ const SectionLoader = () => (
 )
 
 export default function App() {
+  // Advanced analytics tracking
+  useAdvancedAnalytics()
+
   return (
     <div className="min-h-screen bg-slate-950 text-slate-50">
-      {/* SEO & Analytics - Silicon Valley Level */}
+      {/* SEO & Analytics - Unicorn Level 🦄 */}
       <StructuredData />
       <Analytics />
+      <LiveChat />
+      <ProductTour />
+      <AppDeepLinking />
 
       <Header />
 

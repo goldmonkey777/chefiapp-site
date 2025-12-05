@@ -1,0 +1,14 @@
+<svg width="80" height="80" viewBox="0 0 80 80" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <!-- ChefIApp™ Icon - App Icon / Favicon -->
+  <!-- Background -->
+  <rect width="80" height="80" rx="16" fill="#0f172a"/>
+
+  <!-- Chef Hat Icon (Simplified) -->
+  <path d="M20 35C20 30 25 25 30 25C32 22 35 20 40 20C45 20 48 22 50 25C55 25 60 30 60 35C60 38 58 40 55 42V50C55 52 53 54 50 54H30C27 54 25 52 25 50V42C22 40 20 38 20 35Z" fill="#f97316"/>
+
+  <!-- I.A. Badge -->
+  <rect x="15" y="60" width="50" height="16" rx="8" fill="#10b981"/>
+  <text x="40" y="71" font-family="system-ui, -apple-system, sans-serif" font-size="10" font-weight="700" text-anchor="middle" fill="#ffffff" letter-spacing="0.5">
+    I.A.
+  </text>
+</svg>

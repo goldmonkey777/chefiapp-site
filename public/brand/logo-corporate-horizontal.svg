@@ -1,0 +1,18 @@
+<svg width="400" height="60" viewBox="0 0 400 60" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <!-- ChefIApp™ Logo - Corporate Horizontal Version -->
+  <!-- Main Text -->
+  <text x="20" y="40" font-family="system-ui, -apple-system, sans-serif" font-size="36" font-weight="600" fill="#0f172a">
+    ChefIApp™
+  </text>
+
+  <!-- I.A. Badge -->
+  <rect x="250" y="18" width="50" height="24" rx="12" fill="#10b981"/>
+  <text x="275" y="34" font-family="system-ui, -apple-system, sans-serif" font-size="12" font-weight="700" text-anchor="middle" fill="#ffffff" letter-spacing="0.5">
+    I.A.
+  </text>
+
+  <!-- Tagline -->
+  <text x="310" y="35" font-family="system-ui, -apple-system, sans-serif" font-size="14" fill="#64748b" font-style="italic">
+    Hospitality Intelligence Platform
+  </text>
+</svg>

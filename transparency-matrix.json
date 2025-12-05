@@ -1,0 +1,719 @@
+{
+  "$schema": "https://json-schema.org/draft-07/schema#",
+  "title": "ChefIApp™ Transparency Matrix",
+  "description": "Strategic decision framework for what to disclose publicly vs. keep confidential",
+  "version": "1.0.0",
+  "lastUpdated": "2025-12-05",
+  "company": {
+    "name": "ChefIApp™",
+    "legalEntity": "Goldmonkey Studio LLC",
+    "location": "Wyoming, USA / Ibiza, Spain"
+  },
+  "categories": [
+    {
+      "id": "vision-mission",
+      "name": "Visão, Propósito e Missão",
+      "visibility": "public",
+      "priority": "critical",
+      "items": [
+        {
+          "item": "Missão da empresa",
+          "example": "Transform hospitality workforce management",
+          "visibility": "public",
+          "reason": "Builds brand identity and attracts aligned stakeholders",
+          "confidenceLevel": "safe",
+          "phase": ["seed", "series-a", "growth"]
+        },
+        {
+          "item": "Origem da empresa",
+          "example": "Born in Ibiza, tested at Sofia Gastrobar",
+          "visibility": "public",
+          "reason": "Authentic storytelling, credibility, differentiation",
+          "confidenceLevel": "safe",
+          "phase": ["seed", "series-a", "growth"]
+        },
+        {
+          "item": "Problema que resolve",
+          "example": "High turnover, low productivity, poor engagement in hospitality",
+          "visibility": "public",
+          "reason": "Validates market need, resonates with target customers",
+          "confidenceLevel": "safe",
+          "phase": ["seed", "series-a", "growth"]
+        },
+        {
+          "item": "Valores da marca",
+          "example": "Innovation, hospitality excellence, team empowerment",
+          "visibility": "public",
+          "reason": "Attracts aligned customers, partners, employees",
+          "confidenceLevel": "safe",
+          "phase": ["seed", "series-a", "growth"]
+        },
+        {
+          "item": "História do fundador",
+          "example": "Elder Miranda de Andrade - hospitality + tech background",
+          "visibility": "public",
+          "reason": "Human connection, credibility, thought leadership",
+          "confidenceLevel": "safe",
+          "phase": ["seed", "series-a", "growth"]
+        }
+      ]
+    },
+    {
+      "id": "traction-results",
+      "name": "Tração e Resultados",
+      "visibility": "mixed",
+      "priority": "high",
+      "items": [
+        {
+          "item": "Case study piloto",
+          "example": "Sofia Gastrobar Ibiza (lab partner)",
+          "visibility": "public",
+          "reason": "Social proof, real-world validation",
+          "confidenceLevel": "safe",
+          "phase": ["seed", "series-a", "growth"]
+        },
+        {
+          "item": "Métricas de impacto agregadas",
+          "example": "40% productivity increase, 30% turnover reduction",
+          "visibility": "public",
+          "reason": "Demonstrates value, attracts customers",
+          "confidenceLevel": "safe",
+          "phase": ["seed", "series-a", "growth"],
+          "note": "Use ranges, not exact numbers"
+        },
+        {
+          "item": "Número de usuários ativos",
+          "example": "200+ active users",
+          "visibility": "public",
+          "reason": "Shows traction, social proof",
+          "confidenceLevel": "moderate",
+          "phase": ["series-a", "growth"],
+          "note": "Use ranges (200+, 1000+) not exact numbers"
+        },
+        {
+          "item": "Número de clientes/restaurantes",
+          "example": "15+ restaurants across Europe",
+          "visibility": "public",
+          "reason": "Market validation",
+          "confidenceLevel": "moderate",
+          "phase": ["series-a", "growth"],
+          "note": "Aggregate only, no client names without permission"
+        },
+        {
+          "item": "Taxa de crescimento (growth rate)",
+          "example": "Growing 25% month-over-month",
+          "visibility": "investor-only",
+          "reason": "Sensitive competitive data",
+          "confidenceLevel": "confidential",
+          "phase": ["series-a", "growth"],
+          "requiresNDA": true
+        },
+        {
+          "item": "Receita (MRR/ARR)",
+          "example": "€15k MRR, €180k ARR",
+          "visibility": "investor-only",
+          "reason": "Competitive intelligence, valuation sensitivity",
+          "confidenceLevel": "highly-confidential",
+          "phase": ["series-a", "growth"],
+          "requiresNDA": true
+        },
+        {
+          "item": "Nomes de clientes específicos",
+          "example": "Sofia Gastrobar, Restaurant X, Hotel Y",
+          "visibility": "permission-required",
+          "reason": "Privacy, competitive advantage of clients",
+          "confidenceLevel": "confidential",
+          "phase": ["seed", "series-a", "growth"],
+          "note": "Only with explicit written permission"
+        }
+      ]
+    },
+    {
+      "id": "product-features",
+      "name": "Produto e Funcionalidades",
+      "visibility": "public",
+      "priority": "high",
+      "items": [
+        {
+          "item": "Features principais (o quê)",
+          "example": "GPS check-in, task management, gamification, dashboards",
+          "visibility": "public",
+          "reason": "Sales, marketing, differentiation",
+          "confidenceLevel": "safe",
+          "phase": ["seed", "series-a", "growth"]
+        },
+        {
+          "item": "Benefícios ao cliente",
+          "example": "Reduce turnover, increase productivity, boost engagement",
+          "visibility": "public",
+          "reason": "Value proposition clarity",
+          "confidenceLevel": "safe",
+          "phase": ["seed", "series-a", "growth"]
+        },
+        {
+          "item": "Plataformas suportadas",
+          "example": "iOS, Android, Web (PWA)",
+          "visibility": "public",
+          "reason": "Technical capabilities, market reach",
+          "confidenceLevel": "safe",
+          "phase": ["seed", "series-a", "growth"]
+        },
+        {
+          "item": "Integrações disponíveis",
+          "example": "Integrates with POS systems, HR platforms",
+          "visibility": "public",
+          "reason": "Shows ecosystem compatibility",
+          "confidenceLevel": "safe",
+          "phase": ["series-a", "growth"]
+        },
+        {
+          "item": "Algoritmos de gamificação",
+          "example": "Proprietary XP calculation, behavior engine",
+          "visibility": "confidential",
+          "reason": "Core IP, competitive advantage",
+          "confidenceLevel": "highly-confidential",
+          "phase": ["seed", "series-a", "growth"],
+          "requiresNDA": true,
+          "protection": "trade-secret"
+        },
+        {
+          "item": "Arquitetura técnica detalhada",
+          "example": "Database schema, API endpoints, infrastructure",
+          "visibility": "confidential",
+          "reason": "Security, competitive advantage",
+          "confidenceLevel": "highly-confidential",
+          "phase": ["seed", "series-a", "growth"],
+          "requiresNDA": true
+        },
+        {
+          "item": "Código-fonte",
+          "example": "GitHub repositories, source code",
+          "visibility": "confidential",
+          "reason": "IP protection, security",
+          "confidenceLevel": "highly-confidential",
+          "phase": ["seed", "series-a", "growth"],
+          "protection": "copyright",
+          "access": "core-team-only"
+        }
+      ]
+    },
+    {
+      "id": "roadmap",
+      "name": "Roadmap e Evolução",
+      "visibility": "mixed",
+      "priority": "medium",
+      "items": [
+        {
+          "item": "Roadmap de alto nível",
+          "example": "Phase 1: MVP → Phase 2: AI Analytics → Phase 3: Integrations",
+          "visibility": "public",
+          "reason": "Shows vision, attracts early adopters",
+          "confidenceLevel": "safe",
+          "phase": ["seed", "series-a", "growth"],
+          "note": "No specific dates, only phases"
+        },
+        {
+          "item": "Features planejadas (genéricas)",
+          "example": "AI recommendations, multi-location management",
+          "visibility": "public",
+          "reason": "Market positioning, customer excitement",
+          "confidenceLevel": "moderate",
+          "phase": ["seed", "series-a", "growth"],
+          "note": "Concepts only, not implementation details"
+        },
+        {
+          "item": "Roadmap com datas específicas",
+          "example": "Launch AI module on Q2 2025",
+          "visibility": "internal-only",
+          "reason": "Execution risk, reputational damage if delayed",
+          "confidenceLevel": "confidential",
+          "phase": ["seed", "series-a", "growth"],
+          "note": "Only for internal planning"
+        },
+        {
+          "item": "Features não anunciadas",
+          "example": "Secret feature X in development",
+          "visibility": "confidential",
+          "reason": "Competitive surprise, prevents copycats",
+          "confidenceLevel": "highly-confidential",
+          "phase": ["seed", "series-a", "growth"],
+          "requiresNDA": true
+        },
+        {
+          "item": "Parcerias em negociação",
+          "example": "Talks with POS provider Y",
+          "visibility": "confidential",
+          "reason": "Deal sensitivity, NDA obligations",
+          "confidenceLevel": "highly-confidential",
+          "phase": ["seed", "series-a", "growth"],
+          "requiresNDA": true
+        }
+      ]
+    },
+    {
+      "id": "market-opportunity",
+      "name": "Mercado e Oportunidade",
+      "visibility": "public",
+      "priority": "high",
+      "items": [
+        {
+          "item": "TAM/SAM/SOM estimados",
+          "example": "TAM: $50B hospitality tech, SAM: $5B workforce mgmt, SOM: $500M",
+          "visibility": "public",
+          "reason": "Shows market size, opportunity",
+          "confidenceLevel": "safe",
+          "phase": ["seed", "series-a", "growth"],
+          "note": "Use conservative, cited estimates"
+        },
+        {
+          "item": "Segmentos de mercado",
+          "example": "Restaurants, hotels, bars, catering",
+          "visibility": "public",
+          "reason": "Clarifies target audience",
+          "confidenceLevel": "safe",
+          "phase": ["seed", "series-a", "growth"]
+        },
+        {
+          "item": "Pain points validados",
+          "example": "70% turnover in hospitality, 40% productivity loss",
+          "visibility": "public",
+          "reason": "Validates problem, resonates with customers",
+          "confidenceLevel": "safe",
+          "phase": ["seed", "series-a", "growth"],
+          "note": "Cite industry research"
+        },
+        {
+          "item": "Competitor landscape (genérico)",
+          "example": "Alternative solutions: Excel, generic HRM, competitors A/B",
+          "visibility": "public",
+          "reason": "Shows awareness, differentiation",
+          "confidenceLevel": "safe",
+          "phase": ["seed", "series-a", "growth"]
+        },
+        {
+          "item": "Análise competitiva detalhada",
+          "example": "Competitor A pricing, features, weaknesses",
+          "visibility": "internal-only",
+          "reason": "Competitive intelligence",
+          "confidenceLevel": "confidential",
+          "phase": ["seed", "series-a", "growth"]
+        }
+      ]
+    },
+    {
+      "id": "business-model",
+      "name": "Modelo de Negócio",
+      "visibility": "public",
+      "priority": "high",
+      "items": [
+        {
+          "item": "Modelo de receita",
+          "example": "SaaS subscription-based",
+          "visibility": "public",
+          "reason": "Business clarity, investor understanding",
+          "confidenceLevel": "safe",
+          "phase": ["seed", "series-a", "growth"]
+        },
+        {
+          "item": "Pricing tiers (público)",
+          "example": "Starter: €29/mo, Pro: €99/mo, Enterprise: custom",
+          "visibility": "public",
+          "reason": "Transparency, lead generation",
+          "confidenceLevel": "safe",
+          "phase": ["series-a", "growth"]
+        },
+        {
+          "item": "Target customer profile",
+          "example": "SMB restaurants 10-50 employees",
+          "visibility": "public",
+          "reason": "Market positioning",
+          "confidenceLevel": "safe",
+          "phase": ["seed", "series-a", "growth"]
+        },
+        {
+          "item": "CAC/LTV detalhados",
+          "example": "CAC: €120, LTV: €2,800",
+          "visibility": "investor-only",
+          "reason": "Competitive intelligence, unit economics",
+          "confidenceLevel": "highly-confidential",
+          "phase": ["series-a", "growth"],
+          "requiresNDA": true
+        },
+        {
+          "item": "Margens de lucro",
+          "example": "70% gross margin, 15% net margin",
+          "visibility": "investor-only",
+          "reason": "Financial sensitivity",
+          "confidenceLevel": "highly-confidential",
+          "phase": ["series-a", "growth"],
+          "requiresNDA": true
+        },
+        {
+          "item": "Churn rate",
+          "example": "5% monthly churn",
+          "visibility": "investor-only",
+          "reason": "Business health indicator",
+          "confidenceLevel": "highly-confidential",
+          "phase": ["series-a", "growth"],
+          "requiresNDA": true
+        },
+        {
+          "item": "Pricing estratégico / testes A/B",
+          "example": "Testing €79 vs €99 tier",
+          "visibility": "internal-only",
+          "reason": "Competitive advantage, market positioning",
+          "confidenceLevel": "confidential",
+          "phase": ["seed", "series-a", "growth"]
+        }
+      ]
+    },
+    {
+      "id": "team-governance",
+      "name": "Equipe e Governança",
+      "visibility": "public",
+      "priority": "high",
+      "items": [
+        {
+          "item": "Fundador e CEO",
+          "example": "Elder Miranda de Andrade - Founder & CEO",
+          "visibility": "public",
+          "reason": "Credibility, leadership transparency",
+          "confidenceLevel": "safe",
+          "phase": ["seed", "series-a", "growth"]
+        },
+        {
+          "item": "Equipe core (públicos)",
+          "example": "CTO, Head of Product, etc.",
+          "visibility": "public",
+          "reason": "Team strength, hiring signal",
+          "confidenceLevel": "safe",
+          "phase": ["series-a", "growth"]
+        },
+        {
+          "item": "Advisors e mentores",
+          "example": "Advisor: John Doe (ex-VP at Company X)",
+          "visibility": "public",
+          "reason": "Credibility by association",
+          "confidenceLevel": "safe",
+          "phase": ["seed", "series-a", "growth"],
+          "note": "With permission only"
+        },
+        {
+          "item": "Estrutura legal",
+          "example": "Goldmonkey Studio LLC (Wyoming, USA)",
+          "visibility": "public",
+          "reason": "Legal transparency, trust",
+          "confidenceLevel": "safe",
+          "phase": ["seed", "series-a", "growth"]
+        },
+        {
+          "item": "Cap table (ownership)",
+          "example": "Founder: 80%, Investors: 20%",
+          "visibility": "investor-only",
+          "reason": "Sensitive ownership structure",
+          "confidenceLevel": "highly-confidential",
+          "phase": ["series-a", "growth"],
+          "requiresNDA": true
+        },
+        {
+          "item": "Salários da equipe",
+          "example": "Founder salary: €X, CTO: €Y",
+          "visibility": "internal-only",
+          "reason": "Privacy, competitive hiring",
+          "confidenceLevel": "highly-confidential",
+          "phase": ["seed", "series-a", "growth"]
+        }
+      ]
+    },
+    {
+      "id": "financials",
+      "name": "Finanças e Métricas",
+      "visibility": "confidential",
+      "priority": "critical",
+      "items": [
+        {
+          "item": "Burn rate",
+          "example": "€30k/month",
+          "visibility": "investor-only",
+          "reason": "Financial health, runway calculation",
+          "confidenceLevel": "highly-confidential",
+          "phase": ["series-a", "growth"],
+          "requiresNDA": true
+        },
+        {
+          "item": "Runway",
+          "example": "18 months runway",
+          "visibility": "investor-only",
+          "reason": "Urgency for funding",
+          "confidenceLevel": "highly-confidential",
+          "phase": ["series-a", "growth"],
+          "requiresNDA": true
+        },
+        {
+          "item": "Funding history",
+          "example": "€500k seed round from Investor X",
+          "visibility": "public",
+          "reason": "Credibility, milestone achievement",
+          "confidenceLevel": "safe",
+          "phase": ["series-a", "growth"],
+          "note": "With investor permission"
+        },
+        {
+          "item": "Valuation",
+          "example": "€5M post-money valuation",
+          "visibility": "investor-only",
+          "reason": "Pricing sensitivity for future rounds",
+          "confidenceLevel": "highly-confidential",
+          "phase": ["series-a", "growth"],
+          "requiresNDA": true
+        },
+        {
+          "item": "Revenue breakdown",
+          "example": "60% Starter, 30% Pro, 10% Enterprise",
+          "visibility": "investor-only",
+          "reason": "Business model insights",
+          "confidenceLevel": "confidential",
+          "phase": ["series-a", "growth"],
+          "requiresNDA": true
+        },
+        {
+          "item": "Cash flow statement",
+          "example": "Monthly P&L, balance sheet",
+          "visibility": "investor-only",
+          "reason": "Financial due diligence",
+          "confidenceLevel": "highly-confidential",
+          "phase": ["series-a", "growth"],
+          "requiresNDA": true
+        }
+      ]
+    },
+    {
+      "id": "legal-ip",
+      "name": "Legal e Propriedade Intelectual",
+      "visibility": "mixed",
+      "priority": "critical",
+      "items": [
+        {
+          "item": "Trademark registration",
+          "example": "ChefIApp™ registered trademark",
+          "visibility": "public",
+          "reason": "Brand protection, credibility",
+          "confidenceLevel": "safe",
+          "phase": ["seed", "series-a", "growth"]
+        },
+        {
+          "item": "Privacy policy",
+          "example": "GDPR/LGPD compliant privacy policy",
+          "visibility": "public",
+          "reason": "Legal requirement, transparency",
+          "confidenceLevel": "safe",
+          "phase": ["seed", "series-a", "growth"]
+        },
+        {
+          "item": "Terms of service",
+          "example": "User agreement, SLA",
+          "visibility": "public",
+          "reason": "Legal protection, user clarity",
+          "confidenceLevel": "safe",
+          "phase": ["seed", "series-a", "growth"]
+        },
+        {
+          "item": "Patents filed",
+          "example": "Patent pending on gamification algorithm",
+          "visibility": "public",
+          "reason": "IP protection signal",
+          "confidenceLevel": "safe",
+          "phase": ["series-a", "growth"],
+          "note": "After filing, not before"
+        },
+        {
+          "item": "Trade secrets",
+          "example": "Proprietary scoring algorithm",
+          "visibility": "confidential",
+          "reason": "Core competitive advantage",
+          "confidenceLevel": "highly-confidential",
+          "phase": ["seed", "series-a", "growth"],
+          "protection": "trade-secret",
+          "access": "core-team-only"
+        },
+        {
+          "item": "Legal disputes",
+          "example": "Ongoing lawsuit with Competitor X",
+          "visibility": "investor-only",
+          "reason": "Risk disclosure",
+          "confidenceLevel": "highly-confidential",
+          "phase": ["series-a", "growth"],
+          "requiresNDA": true
+        }
+      ]
+    },
+    {
+      "id": "operations",
+      "name": "Operações e Infraestrutura",
+      "visibility": "confidential",
+      "priority": "medium",
+      "items": [
+        {
+          "item": "Tech stack (high-level)",
+          "example": "React, TypeScript, Supabase, Capacitor",
+          "visibility": "public",
+          "reason": "Developer attraction, transparency",
+          "confidenceLevel": "safe",
+          "phase": ["seed", "series-a", "growth"]
+        },
+        {
+          "item": "Infraestrutura detalhada",
+          "example": "AWS config, database schema, API keys",
+          "visibility": "confidential",
+          "reason": "Security, competitive advantage",
+          "confidenceLevel": "highly-confidential",
+          "phase": ["seed", "series-a", "growth"],
+          "access": "dev-team-only"
+        },
+        {
+          "item": "Security practices",
+          "example": "SOC 2 compliant, encrypted data",
+          "visibility": "public",
+          "reason": "Trust, compliance",
+          "confidenceLevel": "safe",
+          "phase": ["series-a", "growth"]
+        },
+        {
+          "item": "Vulnerabilidades conhecidas",
+          "example": "Bug in payment module",
+          "visibility": "internal-only",
+          "reason": "Security risk if disclosed",
+          "confidenceLevel": "highly-confidential",
+          "phase": ["seed", "series-a", "growth"],
+          "access": "security-team-only"
+        },
+        {
+          "item": "Disaster recovery plan",
+          "example": "Backup strategy, failover systems",
+          "visibility": "investor-only",
+          "reason": "Business continuity assurance",
+          "confidenceLevel": "confidential",
+          "phase": ["series-a", "growth"],
+          "requiresNDA": true
+        }
+      ]
+    }
+  ],
+  "visibilityLevels": {
+    "public": {
+      "description": "Anyone can see this",
+      "channels": ["website", "social media", "press releases", "public docs"],
+      "risk": "low",
+      "benefit": "high credibility, trust, reach"
+    },
+    "investor-only": {
+      "description": "Only for investors under NDA",
+      "channels": ["pitch deck", "data room", "board meetings"],
+      "risk": "medium",
+      "benefit": "enables fundraising, due diligence",
+      "requiresNDA": true
+    },
+    "internal-only": {
+      "description": "Core team and authorized personnel only",
+      "channels": ["internal wiki", "Slack", "team meetings"],
+      "risk": "high if leaked",
+      "benefit": "operational efficiency",
+      "access": "team-only"
+    },
+    "confidential": {
+      "description": "Highly sensitive, restricted access",
+      "channels": ["encrypted storage", "need-to-know basis"],
+      "risk": "very high if leaked",
+      "benefit": "protects competitive advantage",
+      "access": "authorized-only"
+    },
+    "permission-required": {
+      "description": "Requires explicit written permission",
+      "channels": ["case studies", "testimonials", "partner pages"],
+      "risk": "legal if disclosed without permission",
+      "benefit": "social proof when authorized"
+    }
+  },
+  "maturityPhases": {
+    "seed": {
+      "description": "Pre-revenue or early revenue, MVP stage",
+      "focus": "Product-market fit, initial traction",
+      "transparencyLevel": "moderate",
+      "note": "Show vision, protect execution details"
+    },
+    "series-a": {
+      "description": "Product-market fit achieved, scaling",
+      "focus": "Growth metrics, team building, market expansion",
+      "transparencyLevel": "high",
+      "note": "Can share more metrics, still protect core IP"
+    },
+    "growth": {
+      "description": "Established business, strong revenue",
+      "focus": "Efficiency, profitability, market leadership",
+      "transparencyLevel": "very high",
+      "note": "Public company readiness, investor relations"
+    }
+  },
+  "decisionFramework": {
+    "questions": [
+      "Does this build credibility or trust?",
+      "Can this be easily copied by competitors?",
+      "Does this expose vulnerabilities?",
+      "Does this differentiate without revealing methods?",
+      "Could this harm ongoing negotiations?",
+      "Is this a verifiable result?",
+      "Is this financially sensitive?",
+      "Is this covered by NDA or contract?"
+    ],
+    "rules": [
+      "If builds trust + not easily copied = PUBLIC",
+      "If competitive advantage + can be copied = CONFIDENTIAL",
+      "If required for fundraising = INVESTOR-ONLY with NDA",
+      "If operational detail = INTERNAL-ONLY",
+      "If trade secret or patent-pending = HIGHLY-CONFIDENTIAL"
+    ]
+  },
+  "recommendations": {
+    "forChefIApp": {
+      "publicWebsite": [
+        "Vision, mission, origin story",
+        "Case study: Sofia Gastrobar",
+        "Features (what, not how)",
+        "High-level roadmap",
+        "Team profiles",
+        "Pricing tiers",
+        "Blog with thought leadership"
+      ],
+      "investorPage": [
+        "All public content +",
+        "Aggregated metrics (200+ users, €X ARR range)",
+        "Market opportunity (TAM/SAM/SOM)",
+        "Business model overview",
+        "CTA: Schedule investor call"
+      ],
+      "pitchDeckNDA": [
+        "All investor page content +",
+        "Exact financials (MRR, ARR, burn rate)",
+        "CAC/LTV breakdown",
+        "Detailed roadmap with dates",
+        "Competitive analysis",
+        "Cap table",
+        "Full customer list"
+      ],
+      "internalWiki": [
+        "Source code documentation",
+        "Product roadmap with sprints",
+        "OKRs and KPIs",
+        "Customer feedback logs",
+        "Bug tracker",
+        "Team processes"
+      ]
+    }
+  },
+  "legalNotice": "This transparency matrix is a strategic tool. Always consult legal counsel before disclosing sensitive information. Respect NDAs, contracts, and privacy laws (GDPR, LGPD, CCPA).",
+  "metadata": {
+    "author": "Goldmonkey Studio LLC + Claude (Anthropic)",
+    "purpose": "Strategic transparency framework for ChefIApp™",
+    "usage": "Reference this JSON when deciding what to disclose publicly vs. keep confidential"
+  }
+}
