@@ -10,8 +10,8 @@ export type Translations = typeof pt
 
 const translations: Record<Language, Translations> = {
   pt,
-  en,
-  es,
+  en: en as Translations,
+  es: es as Translations,
 }
 
 // Available languages
